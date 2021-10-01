@@ -30,5 +30,45 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Inicio</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container-fluid row container_login p-0 h-100 m-0">
+      <div class="col-5 px-5 py-3 container_login_imagen z-index-pri">
+        <img src="./imgs/Logo.svg" alt="Logo pumafarma" class="logo">
+        <div class="login_card">
+          <img src="./imgs/iconos/icon-medicina.svg" alt="medicina">
+          <h4>
+            Distribuidora farmaceutica
+          </h4>
+        </div>
+        <div class="login_card">
+          <img src="./imgs/iconos/icon-cash.svg" alt="cash">
+          <h4>
+            Ventas al por mayor y menor
+          </h4>
+        </div>
+      </div>
+      <div class="col-7 container_login_formulario">
+        <img src="./imgs/blob-orange.svg" alt="" class="blob-orange">
+        <h4 class="title_login">
+          Bienvenido al sistema
+        </h4>
+        <p class="subtitle_login">
+          Inicia sesión para obtener las diferentes utilidades
+        </p>
+        <form action="">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+            <label for="floatingInput">Usuario</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+          <button class="btn_login">
+            INGRESAR
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

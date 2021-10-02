@@ -275,6 +275,13 @@ h6,
   border: none;
   color: white;
   margin-top: 1.5rem;
+  -webkit-animation: 1s ease-in-out;
+          animation: 1s ease-in-out;
+}
+
+.container_login_formulario form button:hover {
+  -webkit-filter: contrast(0.9);
+          filter: contrast(0.9);
 }
 
 .blob-orange,

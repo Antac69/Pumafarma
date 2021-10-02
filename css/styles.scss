@@ -239,6 +239,10 @@ h6,
       border: none;
       color: white;
       margin-top: 1.5rem;
+      animation: 1s ease-in-out;
+      &:hover{
+        filter: contrast(.9);
+      }
     }
   }
 }

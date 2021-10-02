@@ -1,12 +1,171 @@
 :root {
   --var-font-roboto: "Roboto", sans-serif;
   --var-font-rubik: "Rubik", sans-serif;
+  --var-color-prin: #004D61;
+  --var-color-sec: #FF502F;
+}
+
+html {
+  font-size: 85%;
 }
 
 body {
   height: 100vh;
   overflow: hidden;
   font-family: var(--var-font-roboto);
+}
+
+/* fuentes colores */
+.f-prin {
+  color: var(--var-color-prin);
+}
+
+.f-sec {
+  color: var(--var-color-sec);
+}
+
+.f-blanco {
+  color: white;
+}
+
+button {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.874rem;
+  line-height: 1rem;
+  letter-spacing: 0.078125rem;
+}
+
+h1,
+.h1 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 7rem;
+  letter-spacing: -0.078125rem;
+}
+
+h2,
+.h2 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 4.375rem;
+  letter-spacing: -0.03125rem;
+}
+
+h3,
+.h3 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.h3-rubick {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.5625rem;
+}
+
+h4,
+.h4 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.015625rem;
+}
+
+h5,
+.h5 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+h6,
+.h6 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  letter-spacing: 0.009375rem;
+}
+
+.body-1 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.03125rem;
+}
+
+.body-2 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.015625rem;
+}
+
+.subititle-1 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.009375rem;
+}
+
+.subititle-2 {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.caption {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 0.875rem;
+  letter-spacing: 0.025rem;
+}
+
+.overline {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.09375rem;
+}
+
+.link {
+  font-family: var(--var-font-roboto);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.078125rem;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .z-index-pri {
@@ -18,6 +177,16 @@ body {
   background: url(../imgs/imagen-login.png);
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .logo {
@@ -25,29 +194,45 @@ body {
   min-width: 200px;
 }
 
+.login_cards {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
 .login_card {
-  width: 100%;
+  width: 90%;
   color: white;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   max-width: 486px;
   background: black;
-  padding: 18px;
+  padding: 1.25rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: min-content max-content;
       grid-template-columns: -webkit-min-content -webkit-max-content;
       grid-template-columns: min-content max-content;
-  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
   border-radius: 20px;
   background: rgba(204, 204, 204, 0.5);
   border: 4px solid rgba(255, 255, 255, 0.8);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+
+.login_card h4 {
+  width: 80%;
 }
 
 .login_card img {
-  height: 70%;
+  height: 4.5rem;
 }
 
 /* formulario */
@@ -56,6 +241,7 @@ body {
   background: url(../imgs/fondo.svg);
   background-size: cover;
   background-position: bottom right;
+  overflow: hidden;
 }
 
 .blob-orange,
@@ -66,7 +252,7 @@ body {
 }
 
 .blob-orange {
-  top: -400px;
+  top: -510px;
   left: -400px;
 }
 /*# sourceMappingURL=styles.css.map */

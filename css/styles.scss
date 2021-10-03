@@ -216,11 +216,11 @@ h6,
 /* formulario */
 .container_login_formulario {
   position: relative;
-  background: url(../imgs/fondo.svg);
+  background: white url(../imgs/fondo.svg);
   background-size: cover;
   background-position: bottom right;
   overflow: hidden;
-  padding: 0 7rem;
+  z-index: 2;
 
   form {
     display: grid;
@@ -231,8 +231,8 @@ h6,
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 16px;
-      height: 48px;
+      padding: 1rem;
+      height: 3rem;
       background: #004d61;
       box-shadow: 0px 4px 10px rgba(0, 77, 97, 0.25);
       border-radius: 8px;
@@ -240,8 +240,8 @@ h6,
       color: white;
       margin-top: 1.5rem;
       animation: 1s ease-in-out;
-      &:hover{
-        filter: contrast(.9);
+      &:hover {
+        filter: contrast(0.9);
       }
     }
   }
@@ -270,4 +270,46 @@ h6,
   align-content: center;
   padding-top: 2rem;
   gap: 0.7rem;
+}
+
+/* Resposive */
+@media screen and (max-width: 768px) {
+  .logo{
+    width: 100%;
+    padding-top: .5rem;
+  }
+  .h3-rubick {
+    font-size: 28px;
+  }
+  h5 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .blob-orange {
+    top: -530px;
+    left: -590px;
+  }
+  .container_login_formulario {
+    position: absolute;
+    top: 30%;
+    border-radius: 50px;
+  }
+  .subcontainer_login_formulario{
+    align-content: flex-start;
+    padding-top: 3rem;
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+    form{
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  html{
+    font-size: 100%;
+  }
 }

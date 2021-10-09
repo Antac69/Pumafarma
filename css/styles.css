@@ -408,6 +408,23 @@ h6,
 
 /* \datos usuario */
 /* navbar-links */
+.indicador {
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  margin-left: -12px;
+  border-radius: 20px 0 0 20px;
+  top: -4px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
 .navbar-links {
   list-style: none;
   padding: 0;
@@ -452,15 +469,9 @@ h6,
 }
 
 .navbar-links li a.active + .indicador, .navbar-links li a:hover + .indicador {
-  background: white;
-  position: absolute;
-  height: 100%;
-  width: 120%;
-  margin-left: -12px;
-  border-radius: 20px 0 0 20px;
-  top: -4px;
-  z-index: -1;
-  pointer-events: none;
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .navbar-links li a.active + .indicador::after, .navbar-links li a:hover + .indicador::after {
@@ -498,6 +509,33 @@ h6,
   border-radius: 0 20px 0 0;
 }
 
+/* animacion de identificador */
+@-webkit-keyframes navIdentificador {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes navIdentificador {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+/* \animacion de identificador */
 .icon-inicio > path,
 .icon-ventas > path,
 .icon-cliente > path,

@@ -19,6 +19,6 @@ function verificarZise(item){
     }
 }
 
-let desktop = window.matchMedia("(max-width: 992px)");
+let desktop = window.matchMedia("(max-width: 768px)");
 /* verificarZise(desktop); */
 desktop.addListener(verificarZise);

@@ -64,6 +64,53 @@ button,
     filter: contrast(0.9);
   }
 }
+
+.btn-outline-primary--agregar{
+  background: white;
+  color: var(--var-color-texto--pendiente);
+  border: 2px solid var(--var-color-fondo--pendiente);
+  &:hover,&:active,&:focus{
+    background: var(--var-color-fondo--pendiente);
+    border: 2px solid var(--var-color-fondo--pendiente);
+  }
+}
+.btn-check:checked+.btn-outline-primary--agregar{
+  background: var(--var-color-fondo--pendiente);
+    border: 2px solid var(--var-color-fondo--pendiente);
+  
+}
+.btn-outline--secondary{
+  background: white;
+  color: var(--var-color-verde);
+  border: 2px solid var(--var-color-verde);
+  &:hover,&:active,&:focus{
+    background: var(--var-color-verde);
+    border: 2px solid var(--var-color-verde);
+    color: white;
+  }
+}
+.btn-check:checked+.btn-outline--secondary{
+  background: var(--var-color-verde);
+  border: 2px solid var(--var-color-verde);
+  color: white;
+}
+
+.btn-outline--danger{
+  background: white;
+  color: var(--var-color-sec);
+  border: 2px solid var(--var-color-sec);
+  &:hover,&:active,&:focus{
+    background: var(--var-color-fondo--cancelado);
+    border: 2px solid var(--var-color-fondo--cancelado);
+    color: var(--var-color-texto--cancelado);
+  }
+}
+.btn-check:checked+.btn-outline--danger{
+  background: var(--var-color-fondo--cancelado);
+  border: 2px solid var(--var-color-fondo--cancelado);
+  color: var(--var-color-texto--cancelado);
+}
+
 h1,
 .h1 {
   font-family: var(--var-font-roboto);
@@ -579,6 +626,11 @@ h6,
 }
 /* \tables de datos */
 /* \seccion de datos inicio */
+/* clientes */
+.container_datos-vista_detalles h4,.container_datos-tabla{
+  color: #004d61;
+}
+/* \clientes */
 
 /* Resposive */
 @media screen and (max-width: 768px) {
@@ -619,5 +671,20 @@ h6,
   }
   .container_tables{
     grid-template-columns: 1fr max-content;
+  }
+  /* clientes */
+  .container_datos-forms{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 30px;
+    .container_datos-forms-crud {
+      height: min-content;
+      order: 1;
+    }
+    .container_datos-vista_detalles-head{
+      padding-top: 0 !important;
+      margin-top: -10px;
+    }
   }
 }

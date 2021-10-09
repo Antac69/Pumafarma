@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./imgs/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./imgs/icono.png" type="image/x-icon" />
     <!-- fonts google -->
     <!-- Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,46 +31,78 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Inicio</title>
   </head>
+  <style>
+    html {
+      font-size: 82%;
+    }
+    @media screen and (min-width: 1440px) {
+      html {
+        font-size: 100%;
+      }
+    }
+  </style>
   <body>
     <div class="container-fluid row container_login p-0 h-100 m-0">
-      <div class="col-12 col-md-5 h-100 px-5 py-3 container_login_imagen z-index-pri">
-        <img src="./imgs/Logo.svg" alt="Logo pumafarma" class="logo">
+      <div
+        class="
+          col-12 col-md-5
+          h-100
+          px-5
+          py-3
+          container_login_imagen
+          z-index-pri
+        "
+      >
+        <img src="./imgs/Logo.svg" alt="Logo pumafarma" class="logo" />
         <div class="login_cards d-none d-md-grid">
           <div class="login_card">
-            <img src="./imgs/iconos/icon-medicina.svg" alt="medicina">
-            <h4>
-              Distribuidora farmaceutica
-            </h4>
+            <img src="./imgs/iconos/icon-medicina.svg" alt="medicina" />
+            <h4>Distribuidora farmaceutica</h4>
           </div>
           <div class="login_card">
-            <img src="./imgs/iconos/icon-cash.svg" alt="cash">
-            <h4>
-              Ventas al por mayor y menor
-            </h4>
+            <img src="./imgs/iconos/icon-cash.svg" alt="cash" />
+            <h4>Ventas al por mayor y menor</h4>
           </div>
         </div>
       </div>
-      <div class="col-12  px-md-5 h-100 bottom-0 start-0 end-0 col-md-7 container_login_formulario">
-        <img src="./imgs/blob-orange.svg" alt="" class="blob-orange">
+      <div
+        class="
+          col-12
+          px-md-5
+          h-100
+          bottom-0
+          start-0
+          end-0
+          col-md-7
+          container_login_formulario
+        "
+      >
+        <img src="./imgs/blob-orange.svg" alt="" class="blob-orange" />
         <div class="subcontainer_login_formulario px-3 px-md-5">
-          <h3 class="title_login h3-rubick f-prin">
-            Bienvenido al sistema
-          </h3>
+          <h3 class="title_login h3-rubick f-prin">Bienvenido al sistema</h3>
           <h5 class="subtitle_login">
             Inicia sesión para obtener las diferentes utilidades
           </h5>
           <form action="">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Usuario"
+              />
               <label for="floatingInput">Usuario</label>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Contraseña"
+              />
               <label for="floatingPassword">Contraseña</label>
             </div>
-            <button class="btn_login">
-              INGRESAR
-            </button>
+            <button class="btn_login">INGRESAR</button>
           </form>
         </div>
       </div>

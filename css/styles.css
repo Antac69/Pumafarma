@@ -15,10 +15,6 @@
   --var-color-fondo--cancelado: #F3A89A;
 }
 
-html {
-  font-size: 82%;
-}
-
 body {
   height: 100vh;
   overflow: hidden;
@@ -48,6 +44,11 @@ button, .btn, [type=submit] {
   text-transform: uppercase;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 77, 97, 0.25) !important;
           box-shadow: 0px 4px 10px rgba(0, 77, 97, 0.25) !important;
+}
+
+.btn-close {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 h1,
@@ -116,7 +117,7 @@ h6,
   letter-spacing: 0.009375rem;
 }
 
-.body-1 {
+.text-body-1 {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: normal;
@@ -125,7 +126,7 @@ h6,
   letter-spacing: 0.03125rem;
 }
 
-.body-2 {
+.text-body-2 {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: normal;
@@ -134,7 +135,7 @@ h6,
   letter-spacing: 0.015625rem;
 }
 
-.subititle-1 {
+.text-subititle-1 {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: bold;
@@ -143,7 +144,7 @@ h6,
   letter-spacing: 0.009375rem;
 }
 
-.subititle-2 {
+.text-subititle-2 {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: 500;
@@ -152,7 +153,7 @@ h6,
   letter-spacing: 0.00625rem;
 }
 
-.caption {
+.text-caption {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: normal;
@@ -161,7 +162,7 @@ h6,
   letter-spacing: 0.025rem;
 }
 
-.overline {
+.text-overline {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: normal;
@@ -170,7 +171,7 @@ h6,
   letter-spacing: 0.09375rem;
 }
 
-.link {
+.text-link {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: 500;
@@ -346,6 +347,57 @@ h6,
   top: 110%;
 }
 
+/* navbar */
+.navbar {
+  background: var(--var-color-prin);
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  min-width: 218px;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+  gap: 28px;
+}
+
+/* logo svg */
+.logo-svg {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.logo-svg > path {
+  fill: white;
+}
+
+/* \logo svg */
+/* datos usuario */
+.navbar_usuario {
+  background: #EAF5FF25;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nombre-usuario::before {
+  content: '@';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* \datos usuario */
+/* \navbar */
 /* Resposive */
 @media screen and (max-width: 768px) {
   .logo {
@@ -383,12 +435,6 @@ h6,
   }
   .subcontainer_login_formulario form {
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  html {
-    font-size: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

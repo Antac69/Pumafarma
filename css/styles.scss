@@ -307,6 +307,40 @@ h6,
 }
 
 /* navbar */
+#navbar-desplegar{
+  background: var(--var-color-prin);
+  position: fixed;
+  bottom: .5rem;
+  left: .5rem;
+  padding: .5rem .4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  z-index: 1;
+  svg{
+    width: 48px;
+    height: fit-content;
+    padding-left: 2px;
+  }
+  button{
+    opacity: 0;
+    display: none;
+  }
+}
+.navbar.active{
+  display: grid !important;
+  & + #navbar-desplegar{
+    svg{
+      opacity: 0;
+      display: none;
+    }
+    button{
+      opacity: 1;
+      display: block;
+      font-size: 2rem;
+    }
+  }
+}
 .navbar {
   background: var(--var-color-prin);
   padding: 20px;
@@ -315,6 +349,7 @@ h6,
   align-content: baseline;
   gap: 28px;
   overflow-x: hidden;
+  z-index: 1;
 }
 /* logo svg */
 .logo-svg {
@@ -405,7 +440,7 @@ h6,
           right: 15px;
         }
         &>span:nth-child(1){
-          width: 20px;
+          width: 40px;
           height: 20px;
           background: var(--var-color-prin);
           position: absolute;
@@ -415,7 +450,7 @@ h6,
           border-radius: 0 0 20px 0;
         }
         &>span:nth-child(2){
-          width: 20px;
+          width: 40px;
           height: 20px;
           background: var(--var-color-prin);
           position: absolute;
@@ -502,6 +537,7 @@ h6,
 /* tables de datos */
 .container_tables{
   padding-top: 44px;
+  padding-bottom: 20px;
   display: grid;
   gap: 20px;
   width: 100%;

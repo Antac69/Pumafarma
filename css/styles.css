@@ -355,6 +355,48 @@ h6,
 }
 
 /* navbar */
+#navbar-desplegar {
+  background: var(--var-color-prin);
+  position: fixed;
+  bottom: .5rem;
+  left: .5rem;
+  padding: .5rem .4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  z-index: 1;
+}
+
+#navbar-desplegar svg {
+  width: 48px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 2px;
+}
+
+#navbar-desplegar button {
+  opacity: 0;
+  display: none;
+}
+
+.navbar.active {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
+.navbar.active + #navbar-desplegar svg {
+  opacity: 0;
+  display: none;
+}
+
+.navbar.active + #navbar-desplegar button {
+  opacity: 1;
+  display: block;
+  font-size: 2rem;
+}
+
 .navbar {
   background: var(--var-color-prin);
   padding: 20px;
@@ -365,6 +407,7 @@ h6,
       align-content: baseline;
   gap: 28px;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 /* logo svg */
@@ -491,7 +534,7 @@ h6,
 }
 
 .navbar-links li a.active + .indicador > span:nth-child(1), .navbar-links li a:hover + .indicador > span:nth-child(1) {
-  width: 20px;
+  width: 40px;
   height: 20px;
   background: var(--var-color-prin);
   position: absolute;
@@ -502,7 +545,7 @@ h6,
 }
 
 .navbar-links li a.active + .indicador > span:nth-child(2), .navbar-links li a:hover + .indicador > span:nth-child(2) {
-  width: 20px;
+  width: 40px;
   height: 20px;
   background: var(--var-color-prin);
   position: absolute;
@@ -626,6 +669,7 @@ h6,
 /* tables de datos */
 .container_tables {
   padding-top: 44px;
+  padding-bottom: 20px;
   display: -ms-grid;
   display: grid;
   gap: 20px;

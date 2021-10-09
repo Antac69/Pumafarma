@@ -120,6 +120,7 @@
               </div>
             </li>
         </ul>
+        <form action="">
         <button class="btn text-light navbar_btn-cerrar_sesion">
           <svg class="icon-cerrarSesion" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="Vector" d="M16 21.3333C15.6464 21.3333 15.3073 21.4738 15.0572 21.7239C14.8072 21.9739 14.6667 22.313 14.6667 22.6667C14.6667 23.0203 14.8072 23.3594 15.0572 23.6095C15.3073 23.8595 15.6464 24 16 24H22.6667C23.3739 24 24.0522 23.719 24.5523 23.219C25.0524 22.7189 25.3334 22.0406 25.3334 21.3333V2.66667C25.3334 1.95942 25.0524 1.28115 24.5523 0.781048C24.0522 0.280951 23.3739 0 22.6667 0H16C15.6464 0 15.3073 0.140476 15.0572 0.390524C14.8072 0.640573 14.6667 0.979711 14.6667 1.33333C14.6667 1.68696 14.8072 2.02609 15.0572 2.27614C15.3073 2.52619 15.6464 2.66667 16 2.66667H22.6667V21.3333H16Z" fill="white"/>
@@ -127,6 +128,7 @@
           </svg>
             Cerrar sesión
         </button>
+        </form>
     </nav>
     <!-- \navbar -->
     <!-- seccion datos -->
@@ -205,82 +207,99 @@
       <!-- container tables  -->
       <div class="container_tables">
         <!-- table pedidos recientes -->
-        <div class="container_table--pedidos-recientes">
+        <div class="container_table--pedidos_recientes">
           <div class="container_table--pedidos_recientes-head">
             <h5 class="title-pedidos_recientes">
               Ventas recientes
             </h5>
-            <button class="btn--pedidos_recientes">
+            <button class="btn--pedidos_recientes button">
               ver todos
             </button>
           </div>
           <div class="container_table--pedidos_recientes-table">
-            <table>
-            </table>
-            <table class="table-responsive table-hover w-100">
-              <thead>
-                <tr>
-                  <th>Id_Venta</th>
-                  <th>Id_Empleado</th>
-                  <th>Id_Cliente</th>
-                  <th>#Comprobante</th>
-                  <th>Fecha</th>
-                  <th>Precio</th>
-                  <th>Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>12</td>
-                  <td>20109109221</td>
-                  <td>01-10-21</td>
-                  <td>223</td>
-                  <td>Pendiente</td>
-                </td>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>12</td>
-                  <td>20109109221</td>
-                  <td>01-10-21</td>
-                  <td>223</td>
-                  <td>Finalizado</td>
-                </td>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>12</td>
-                  <td>20109109221</td>
-                  <td>01-10-21</td>
-                  <td>223</td>
-                  <td>Cancelado</td>
-                </td>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>12</td>
-                  <td>20109109221</td>
-                  <td>01-10-21</td>
-                  <td>223</td>
-                  <td>Pendiente</td>
-                </td>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>12</td>
-                  <td>20109109221</td>
-                  <td>01-10-21</td>
-                  <td>223</td>
-                  <td>Finalizado</td>
-                </td>
-              </tbody>
-            </table>
+            <div class="table-reposible w-100">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Id_Venta</th>
+                    <th>Id_Empleado</th>
+                    <th>Id_Cliente</th>
+                    <th>#Comprobante</th>
+                    <th>Fecha</th>
+                    <th>Precio</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>20109109221</td>
+                    <td>01-10-21</td>
+                    <td>223</td>
+                    <td data-estado="estado">Pendiente</td>
+                  </td>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>20109109221</td>
+                    <td>01-10-21</td>
+                    <td>223</td>
+                    <td data-estado="estado">Finalizado</td>
+                  </td>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>20109109221</td>
+                    <td>01-10-21</td>
+                    <td>223</td>
+                    <td data-estado="estado">Cancelado</td>
+                  </td>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>20109109221</td>
+                    <td>01-10-21</td>
+                    <td>223</td>
+                    <td data-estado="estado">Pendiente</td>
+                  </td>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>20109109221</td>
+                    <td>01-10-21</td>
+                    <td>223</td>
+                    <td data-estado="estado">Finalizado</td>
+                  </td>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <!-- \table pedidos recientes -->
         <!-- table ultimos clientes -->
+        <div class="container_table--ultimos_clientes">
+          <div class="container_table--ultimos_clientes-head">
+            <h5 class="title-ultimos_clientes">
+              Ultimos clientes
+            </h5>
+          </div>
+          <ul class="container_table--ultimos_clientes-list">
+            <li>Guillem Valls</li>
+            <li>Fran Sobrino</li>
+            <li>Maria Teresa Lozano</li>
+            <li>Jose David Tortosa</li>
+            <li>Eloisa Sousa</li>
+            <li>Bruno Espinosa</li>
+            <li>Thais Palomo</li>
+            <li>Angelica Saldaña</li>
+          </ul>
+        </div>
         <!-- \table ultimos clientes -->
       </div>
       <!-- \container tables  -->

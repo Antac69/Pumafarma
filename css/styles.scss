@@ -47,6 +47,22 @@ button,
 .btn-close {
   box-shadow: none !important;
 }
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 1rem;
+  height: 3rem;
+  background: #004d61;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  animation: 1s ease-in-out;
+  &:hover {
+    filter: contrast(0.9);
+  }
+}
 h1,
 .h1 {
   font-family: var(--var-font-roboto);
@@ -238,22 +254,8 @@ h6,
     display: grid;
     gap: 0.5rem;
     width: 65%;
-    button {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      height: 3rem;
-      background: #004d61;
-      border-radius: 8px;
-      border: none;
-      color: white;
+    .button{
       margin-top: 1.5rem;
-      animation: 1s ease-in-out;
-      &:hover {
-        filter: contrast(0.9);
-      }
     }
   }
 }
@@ -450,6 +452,7 @@ h6,
   padding-right: 0;
   display: flex;
   justify-content: start;
+  box-shadow: none !important; 
   svg {
     margin-right: 28px;
   }
@@ -496,6 +499,47 @@ h6,
     }
 } 
 /* \cards dashbord */
+/* tables de datos */
+.container_tables{
+  padding-top: 44px;
+  display: grid;
+  gap: 20px;
+  width: 100%;
+}
+.container_table--pedidos_recientes,.container_table--ultimos_clientes{
+  padding: 20px;
+  box-shadow: 0 4px 20px #07252d15;
+  border-radius: 20px;
+  background: white;
+}
+.container_table--pedidos_recientes{
+  overflow: auto;
+  .container_table--pedidos_recientes-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--var-color-prin);
+    .btn--pedidos_recientes{
+      height: min-content;
+    }
+  }
+  .container_table--pedidos_recientes-table{
+    overflow: auto;
+  }
+}
+.container_table--ultimos_clientes{
+  .container_table--ultimos_clientes-head{
+    color: var(--var-color-prin);
+  }
+  .container_table--ultimos_clientes-list{
+    display: grid;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+  }
+}
+/* \tables de datos */
 /* \seccion de datos inicio */
 
 /* Resposive */
@@ -507,13 +551,13 @@ h6,
   .h3-rubick {
     font-size: 28px;
   }
-  h5 {
+/*   h5 {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
-  }
+  } */
   .blob-orange {
     top: -530px;
     left: -590px;

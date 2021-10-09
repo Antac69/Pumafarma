@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imgs/icono.png" type="image/x-icon" />
+    <!-- fonts google -->
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Cliente</title>
+  </head>
+  <body>
+    <!-- navbar -->
+      <nav class="navbar d-none d-lg-grid position-fixed col-2 h-100" id="navbar">
+          <!-- logo svg -->
+          <svg class="logo-svg" width="466" height="80" viewBox="0 0 466 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M8.77266 5.61073C9.40544 4.77483 10.0363 3.8966 10.5603 3.13104C14.7232 6.48708 24.1998 12.3055 28.982 8.86228C24.5915 8.62278 15.1405 6.5156 12.4563 0.0028946C12.4606 0.000979486 12.4645 0 12.4681 0C12.55 0 16.9521 0.792901 22.2508 1.76154C33.9638 3.90355 40.823 5.49746 47.5418 7.63844C57.3148 10.7521 61.1813 13.0079 68.4168 19.8174C70.3771 21.6622 74.0623 24.5667 76.606 26.2723C86.7029 33.0422 93.8213 39.6714 94.278 42.7302C94.5153 44.319 94.3574 44.7147 93.1223 45.626C92.2175 46.2934 91.1966 47.9518 90.3469 50.135C88.3816 55.1834 88.2049 55.4227 82.7178 60.4554C77.8539 64.9161 76.3102 66.0199 73.8902 66.7645C72.8352 67.0891 72.7446 66.957 72.7446 65.1046C72.7446 63.5716 73.1071 62.7056 74.266 61.4677C75.1025 60.5742 76.051 58.9641 76.3738 57.8887C76.883 56.1942 76.8107 55.5649 75.829 53.1532C72.8123 45.7377 63.804 40.1097 54.9982 40.1387C50.7967 40.1524 47.9521 41.3572 45.9553 43.9686C44.6162 45.7194 44.4869 46.2512 44.4869 49.9999C44.4869 53.6403 44.6834 54.5089 46.2012 57.5885C48.2469 61.7369 53.2845 67.0952 56.515 68.5576C58.9691 69.6684 62.5474 69.9072 63.4374 69.0193C63.8579 68.5997 64.1537 68.9654 64.5646 70.4161C65.1053 72.3224 65.0661 72.4296 63.2811 73.9489C61.4456 75.5108 56.7808 78.049 53.397 79.3265C52.3741 79.7125 49.5544 79.9995 46.778 80C42.517 80.001 41.6382 79.84 39.3954 78.6494C35.4418 76.5506 32.3905 72.8756 31.7429 69.4327L31.3992 67.6052L34.8828 67.4538C37.5472 67.338 38.402 67.117 38.5171 66.5136C38.8496 64.7724 32.5524 59.507 26.3826 56.3664C24.1484 55.2296 21.8175 53.0643 18.5641 49.1028C17.9563 48.3632 17.3464 47.6996 16.8874 47.2637C13.4501 31.8465 24.7618 23.1103 31.1548 20.5988C12.8657 22.8849 13.1074 40.6714 15.5433 49.4294C15.2778 49.7718 14.6134 49.7784 12.9517 49.7784C10.5007 49.7784 9.79502 50.0435 6.78952 52.0967C4.92299 53.3716 3.32935 54.3428 3.24891 54.2554C3.16795 54.1675 2.47398 51.6959 1.70669 48.7625C0.537696 44.2946 0.274974 42.0688 0.0875999 35.0481C-0.118092 27.3548 -0.0325553 26.2657 1.1283 21.7745C2.64913 15.89 5.41024 10.0522 8.77266 5.61073ZM60.5189 18.7913C61.7821 19.6015 63.7327 21.2117 64.8528 22.3698L66.8894 24.4752L64.8589 23.6417C61.8366 22.4013 58.4884 20.1267 56.1973 17.7577L54.1607 15.6523L56.1912 16.4858C57.3077 16.944 59.2552 17.9817 60.5189 18.7913Z" fill="#004D61"/>
+              <path d="M111.971 63.36C111.545 63.36 111.161 63.2107 110.819 62.912C110.521 62.5707 110.371 62.1867 110.371 61.76V20.16C110.371 19.6907 110.521 19.3067 110.819 19.008C111.161 18.7093 111.545 18.56 111.971 18.56H129.891C135.353 18.56 139.641 19.8187 142.755 22.336C145.913 24.8533 147.491 28.5227 147.491 33.344C147.491 38.1227 145.934 41.728 142.819 44.16C139.705 46.5493 135.395 47.744 129.891 47.744H122.275V61.76C122.275 62.2293 122.105 62.6133 121.763 62.912C121.465 63.2107 121.081 63.36 120.611 63.36H111.971ZM129.571 38.912C131.449 38.912 132.921 38.4427 133.987 37.504C135.054 36.5227 135.587 35.0933 135.587 33.216C135.587 31.4667 135.075 30.08 134.051 29.056C133.07 27.9893 131.577 27.456 129.571 27.456H122.083V38.912H129.571Z" fill="#004D61"/>
+              <path d="M164.141 64C160.387 64 157.357 62.7413 155.053 60.224C152.749 57.664 151.597 54.1013 151.597 49.536V31.68C151.597 31.2107 151.747 30.8267 152.045 30.528C152.344 30.2293 152.728 30.08 153.197 30.08H161.197C161.667 30.08 162.051 30.2293 162.349 30.528C162.691 30.8267 162.861 31.2107 162.861 31.68V49.152C162.861 53.3333 164.717 55.424 168.429 55.424C170.221 55.424 171.629 54.8693 172.653 53.76C173.677 52.6507 174.189 51.1147 174.189 49.152V31.68C174.189 31.2107 174.339 30.8267 174.637 30.528C174.979 30.2293 175.363 30.08 175.789 30.08H183.789C184.259 30.08 184.643 30.2293 184.941 30.528C185.24 30.8267 185.389 31.2107 185.389 31.68V61.76C185.389 62.1867 185.24 62.5707 184.941 62.912C184.643 63.2107 184.259 63.36 183.789 63.36H176.365C175.939 63.36 175.555 63.2107 175.213 62.912C174.915 62.5707 174.765 62.1867 174.765 61.76V59.328C172.547 62.4427 169.005 64 164.141 64Z" fill="#004D61"/>
+              <path d="M193.517 63.36C193.048 63.36 192.664 63.2107 192.365 62.912C192.067 62.6133 191.917 62.2293 191.917 61.76V31.68C191.917 31.2107 192.067 30.8267 192.365 30.528C192.664 30.2293 193.048 30.08 193.517 30.08H200.493C200.963 30.08 201.347 30.2293 201.645 30.528C201.944 30.8267 202.093 31.2107 202.093 31.68V33.856C203.075 32.576 204.376 31.5307 205.997 30.72C207.661 29.8667 209.517 29.44 211.565 29.44C216.259 29.44 219.501 31.2747 221.293 34.944C222.317 33.3227 223.747 32 225.581 30.976C227.416 29.952 229.379 29.44 231.469 29.44C234.968 29.44 237.805 30.6347 239.981 33.024C242.2 35.3707 243.309 38.8907 243.309 43.584V61.76C243.309 62.1867 243.16 62.5707 242.861 62.912C242.563 63.2107 242.179 63.36 241.709 63.36H234.285C233.816 63.36 233.411 63.2107 233.069 62.912C232.771 62.6133 232.621 62.2293 232.621 61.76V44.032C232.621 41.8987 232.173 40.3627 231.277 39.424C230.424 38.4853 229.251 38.016 227.757 38.016C226.392 38.016 225.261 38.5067 224.365 39.488C223.469 40.4267 223.021 41.9413 223.021 44.032V61.76C223.021 62.1867 222.872 62.5707 222.573 62.912C222.275 63.2107 221.891 63.36 221.421 63.36H213.997C213.528 63.36 213.144 63.2107 212.845 62.912C212.547 62.6133 212.397 62.2293 212.397 61.76V44.032C212.397 41.9413 211.928 40.4267 210.989 39.488C210.093 38.5067 208.941 38.016 207.533 38.016C206.168 38.016 205.016 38.5067 204.077 39.488C203.181 40.4267 202.733 41.92 202.733 43.968V61.76C202.733 62.1867 202.584 62.5707 202.285 62.912C201.987 63.2107 201.603 63.36 201.133 63.36H193.517Z" fill="#004D61"/>
+              <path d="M259.526 64C257.265 64 255.196 63.5733 253.318 62.72C251.484 61.824 250.033 60.6293 248.966 59.136C247.942 57.6 247.43 55.9147 247.43 54.08C247.43 51.136 248.625 48.768 251.014 46.976C253.446 45.184 256.774 43.9467 260.998 43.264L268.998 42.048V41.152C268.998 39.5307 268.657 38.336 267.974 37.568C267.292 36.8 266.14 36.416 264.518 36.416C263.537 36.416 262.726 36.5867 262.086 36.928C261.446 37.2693 260.785 37.7387 260.102 38.336C259.505 38.848 259.057 39.1893 258.758 39.36C258.63 39.7013 258.396 39.872 258.054 39.872H251.078C250.652 39.872 250.289 39.744 249.99 39.488C249.734 39.1893 249.628 38.848 249.67 38.464C249.713 37.312 250.268 36.032 251.334 34.624C252.444 33.216 254.108 32 256.326 30.976C258.588 29.952 261.361 29.44 264.646 29.44C269.894 29.44 273.777 30.6133 276.294 32.96C278.812 35.264 280.07 38.3787 280.07 42.304V61.76C280.07 62.1867 279.921 62.5707 279.622 62.912C279.324 63.2107 278.94 63.36 278.47 63.36H271.046C270.62 63.36 270.236 63.2107 269.894 62.912C269.596 62.5707 269.446 62.1867 269.446 61.76V59.52C268.508 60.8427 267.185 61.9307 265.478 62.784C263.814 63.5947 261.83 64 259.526 64ZM262.534 56.704C264.497 56.704 266.076 56.064 267.27 54.784C268.508 53.504 269.126 51.6267 269.126 49.152V48.256L263.686 49.216C259.846 49.8987 257.926 51.2427 257.926 53.248C257.926 54.3147 258.374 55.168 259.27 55.808C260.166 56.4053 261.254 56.704 262.534 56.704Z" fill="#004D61"/>
+              <path d="M291.418 63.36C290.992 63.36 290.608 63.2107 290.266 62.912C289.968 62.5707 289.818 62.1867 289.818 61.76V38.464H284.954C284.485 38.464 284.101 38.3147 283.802 38.016C283.504 37.7173 283.354 37.3333 283.354 36.864V31.68C283.354 31.2107 283.504 30.8267 283.802 30.528C284.101 30.2293 284.485 30.08 284.954 30.08H289.818V28.032C289.818 23.808 291.013 20.7573 293.402 18.88C295.834 16.96 299.312 16 303.834 16H308.826C309.296 16 309.68 16.1493 309.978 16.448C310.277 16.7467 310.426 17.1307 310.426 17.6V22.784C310.426 23.2107 310.277 23.5947 309.978 23.936C309.68 24.2347 309.296 24.384 308.826 24.384H304.346C302.938 24.384 301.936 24.7253 301.338 25.408C300.741 26.048 300.442 27.0293 300.442 28.352V30.08H308.186C308.656 30.08 309.04 30.2293 309.338 30.528C309.637 30.8267 309.786 31.2107 309.786 31.68V36.864C309.786 37.2907 309.637 37.6747 309.338 38.016C309.04 38.3147 308.656 38.464 308.186 38.464H300.442V61.76C300.442 62.1867 300.293 62.5707 299.994 62.912C299.696 63.2107 299.312 63.36 298.842 63.36H291.418Z" fill="#004D61"/>
+              <path d="M322.901 64C320.64 64 318.571 63.5733 316.693 62.72C314.859 61.824 313.408 60.6293 312.341 59.136C311.317 57.6 310.805 55.9147 310.805 54.08C310.805 51.136 312 48.768 314.389 46.976C316.821 45.184 320.149 43.9467 324.373 43.264L332.373 42.048V41.152C332.373 39.5307 332.032 38.336 331.349 37.568C330.667 36.8 329.515 36.416 327.893 36.416C326.912 36.416 326.101 36.5867 325.461 36.928C324.821 37.2693 324.16 37.7387 323.477 38.336C322.88 38.848 322.432 39.1893 322.133 39.36C322.005 39.7013 321.771 39.872 321.429 39.872H314.453C314.027 39.872 313.664 39.744 313.365 39.488C313.109 39.1893 313.003 38.848 313.045 38.464C313.088 37.312 313.643 36.032 314.709 34.624C315.819 33.216 317.483 32 319.701 30.976C321.963 29.952 324.736 29.44 328.021 29.44C333.269 29.44 337.152 30.6133 339.669 32.96C342.187 35.264 343.445 38.3787 343.445 42.304V61.76C343.445 62.1867 343.296 62.5707 342.997 62.912C342.699 63.2107 342.315 63.36 341.845 63.36H334.421C333.995 63.36 333.611 63.2107 333.269 62.912C332.971 62.5707 332.821 62.1867 332.821 61.76V59.52C331.883 60.8427 330.56 61.9307 328.853 62.784C327.189 63.5947 325.205 64 322.901 64ZM325.909 56.704C327.872 56.704 329.451 56.064 330.645 54.784C331.883 53.504 332.501 51.6267 332.501 49.152V48.256L327.061 49.216C323.221 49.8987 321.301 51.2427 321.301 53.248C321.301 54.3147 321.749 55.168 322.645 55.808C323.541 56.4053 324.629 56.704 325.909 56.704Z" fill="#004D61"/>
+              <path d="M351.267 63.36C350.798 63.36 350.414 63.2107 350.115 62.912C349.817 62.6133 349.667 62.2293 349.667 61.76V31.68C349.667 31.2107 349.817 30.8267 350.115 30.528C350.414 30.2293 350.798 30.08 351.267 30.08H358.627C359.097 30.08 359.481 30.2507 359.779 30.592C360.121 30.8907 360.291 31.2533 360.291 31.68V34.24C362.638 31.4667 365.795 30.08 369.763 30.08H372.579C373.049 30.08 373.433 30.2293 373.731 30.528C374.03 30.8267 374.179 31.2107 374.179 31.68V38.272C374.179 38.6987 374.03 39.0827 373.731 39.424C373.433 39.7227 373.049 39.872 372.579 39.872H366.371C364.622 39.872 363.257 40.3627 362.275 41.344C361.337 42.2827 360.867 43.6267 360.867 45.376V61.76C360.867 62.2293 360.697 62.6133 360.355 62.912C360.057 63.2107 359.673 63.36 359.203 63.36H351.267Z" fill="#004D61"/>
+              <path d="M379.33 63.36C378.86 63.36 378.476 63.2107 378.178 62.912C377.879 62.6133 377.73 62.2293 377.73 61.76V31.68C377.73 31.2107 377.879 30.8267 378.178 30.528C378.476 30.2293 378.86 30.08 379.33 30.08H386.306C386.775 30.08 387.159 30.2293 387.458 30.528C387.756 30.8267 387.906 31.2107 387.906 31.68V33.856C388.887 32.576 390.188 31.5307 391.81 30.72C393.474 29.8667 395.33 29.44 397.378 29.44C402.071 29.44 405.314 31.2747 407.106 34.944C408.13 33.3227 409.559 32 411.394 30.976C413.228 29.952 415.191 29.44 417.282 29.44C420.78 29.44 423.618 30.6347 425.794 33.024C428.012 35.3707 429.122 38.8907 429.122 43.584V61.76C429.122 62.1867 428.972 62.5707 428.674 62.912C428.375 63.2107 427.991 63.36 427.522 63.36H420.098C419.628 63.36 419.223 63.2107 418.882 62.912C418.583 62.6133 418.434 62.2293 418.434 61.76V44.032C418.434 41.8987 417.986 40.3627 417.09 39.424C416.236 38.4853 415.063 38.016 413.57 38.016C412.204 38.016 411.074 38.5067 410.178 39.488C409.282 40.4267 408.834 41.9413 408.834 44.032V61.76C408.834 62.1867 408.684 62.5707 408.386 62.912C408.087 63.2107 407.703 63.36 407.234 63.36H399.81C399.34 63.36 398.956 63.2107 398.658 62.912C398.359 62.6133 398.21 62.2293 398.21 61.76V44.032C398.21 41.9413 397.74 40.4267 396.802 39.488C395.906 38.5067 394.754 38.016 393.346 38.016C391.98 38.016 390.828 38.5067 389.89 39.488C388.994 40.4267 388.546 41.92 388.546 43.968V61.76C388.546 62.1867 388.396 62.5707 388.098 62.912C387.799 63.2107 387.415 63.36 386.946 63.36H379.33Z" fill="#004D61"/>
+              <path d="M445.339 64C443.077 64 441.008 63.5733 439.131 62.72C437.296 61.824 435.845 60.6293 434.779 59.136C433.755 57.6 433.243 55.9147 433.243 54.08C433.243 51.136 434.437 48.768 436.827 46.976C439.259 45.184 442.587 43.9467 446.811 43.264L454.811 42.048V41.152C454.811 39.5307 454.469 38.336 453.787 37.568C453.104 36.8 451.952 36.416 450.331 36.416C449.349 36.416 448.539 36.5867 447.899 36.928C447.259 37.2693 446.597 37.7387 445.915 38.336C445.317 38.848 444.869 39.1893 444.571 39.36C444.443 39.7013 444.208 39.872 443.867 39.872H436.891C436.464 39.872 436.101 39.744 435.803 39.488C435.547 39.1893 435.44 38.848 435.483 38.464C435.525 37.312 436.08 36.032 437.147 34.624C438.256 33.216 439.92 32 442.139 30.976C444.4 29.952 447.173 29.44 450.459 29.44C455.707 29.44 459.589 30.6133 462.107 32.96C464.624 35.264 465.883 38.3787 465.883 42.304V61.76C465.883 62.1867 465.733 62.5707 465.435 62.912C465.136 63.2107 464.752 63.36 464.283 63.36H456.859C456.432 63.36 456.048 63.2107 455.707 62.912C455.408 62.5707 455.259 62.1867 455.259 61.76V59.52C454.32 60.8427 452.997 61.9307 451.291 62.784C449.627 63.5947 447.643 64 445.339 64ZM448.347 56.704C450.309 56.704 451.888 56.064 453.083 54.784C454.32 53.504 454.939 51.6267 454.939 49.152V48.256L449.499 49.216C445.659 49.8987 443.739 51.2427 443.739 53.248C443.739 54.3147 444.187 55.168 445.083 55.808C445.979 56.4053 447.067 56.704 448.347 56.704Z" fill="#004D61"/>
+              </svg>
+          <!-- \logo svg -->
+          <div class="navbar_usuario">
+              <span class="tipo-usuario text-body-1" id="tipo-usu">
+                  Admin
+              </span>
+              <span class="nombre-usuario text-caption" id="nom-usu">
+                  Cristofer
+              </span>
+          </div>
+          <ul class="navbar-links">
+              <li>
+                <a href="./inicio.html">
+                  <svg class="icon-inicio" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="icon-inicio" d="M22.7313 12.3535V12.3536V21.6295C22.7313 21.9926 22.5869 22.3411 22.3295 22.5982C22.0721 22.8553 21.7227 23 21.3582 23H2.37313C2.0086 23 1.65922 22.8553 1.40179 22.5982C1.1444 22.3411 1 21.9926 1 21.6295V12.3536V12.3535C0.999946 11.8444 1.10393 11.3407 1.30563 10.8731C1.50732 10.4055 1.8025 9.98391 2.17312 9.63414L2.17323 9.63403L10.9218 1.37513L10.9219 1.375C11.1768 1.13429 11.5145 1 11.8657 1C12.2169 1 12.5545 1.13429 12.8094 1.375L12.8095 1.37513L21.5581 9.63403L21.5582 9.63414C21.9288 9.98391 22.224 10.4055 22.4257 10.8731C22.6274 11.3407 22.7314 11.8444 22.7313 12.3535Z" stroke="#004D61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span  class="h6">Inicio</span>
+                </a>
+                <div class="indicador">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a href="./ventas.html">
+                <svg class="icon-ventas" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path id="icon-cash" d="M22.772 12.1688L22.7719 12.1688L22.7791 12.1618C23.0867 11.8623 23.2605 11.4455 23.2605 11.0068V2.4006C23.2605 1.49448 22.516 0.75 21.6099 0.75H13.0037C12.5639 0.75 12.1433 0.924842 11.8417 1.2265L1.243 11.8252C0.585213 12.4829 0.590101 13.5204 1.231 14.1613L9.83715 22.7675C10.4805 23.4108 11.53 23.4108 12.1733 22.7675L22.772 12.1688ZM21.1596 5.40135C21.1596 6.81181 20.0196 7.9518 18.6091 7.9518C17.1987 7.9518 16.0587 6.81181 16.0587 5.40135C16.0587 3.99089 17.1987 2.8509 18.6091 2.8509C20.0196 2.8509 21.1596 3.99089 21.1596 5.40135Z" stroke="white" stroke-width="1.5"/>
+                </svg>
+                <span  class="h6">Ventas</span>
+                </a>
+                <div class="indicador">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a  href="./clientes.html">
+                <svg class="icon-cliente" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle id="Ellipse 1" cx="12.3684" cy="6.31579" r="5.31579" stroke="white" stroke-width="2"/>
+                  <path id="Subtract" d="M23.7368 24C23.7368 17.7214 18.647 12.6316 12.3684 12.6316C6.08982 12.6316 1 17.7214 1 24" stroke="white" stroke-width="2"/>
+                </svg>
+                <span class="h6">Clientes</span>
+                </a>
+                <div class="indicador">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a href="./productos.html">
+                <svg class="icon-pedido" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path id="icon-pedido" d="M12.3383 1.56188C12.1583 1.48977 11.9575 1.48977 11.7776 1.56188L2.78237 5.15966L6.40577 6.60812L15.6813 2.8988L12.3383 1.56188ZM17.7101 3.71121L8.43452 7.42053L12.0579 8.86898L21.3335 5.15966L17.7101 3.71121ZM22.6086 6.27351L12.8115 10.1923V22.1327L22.6086 18.2139V6.27502V6.27351ZM11.3043 22.1342V10.1908L1.50724 6.27351V18.2154L11.3043 22.1342ZM11.2184 0.161652C11.7573 -0.0538841 12.3585 -0.0538841 12.8975 0.161652L23.6426 4.4603C23.7823 4.51629 23.902 4.61283 23.9864 4.73747C24.0707 4.86211 24.1158 5.00916 24.1159 5.15966V18.2154C24.1157 18.5166 24.0252 18.8108 23.8563 19.0601C23.6873 19.3094 23.4475 19.5024 23.1678 19.6141L12.3383 23.9459C12.1583 24.018 11.9575 24.018 11.7776 23.9459L0.949562 19.6141C0.669594 19.5026 0.429477 19.3097 0.260213 19.0604C0.0909495 18.8111 0.000310988 18.5167 0 18.2154L0 5.15966C3.50282e-05 5.00916 0.0451324 4.86211 0.129483 4.73747C0.213833 4.61283 0.333572 4.51629 0.473274 4.4603L11.2184 0.161652Z" fill="white"/>
+                </svg>
+                <span class="h6">Productos</span>
+                </a>
+                <div class="indicador">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a class="active" href="./empleados.html">
+                <svg class="icon-empleado" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle id="Ellipse 1" cx="12.3684" cy="6.31579" r="5.31579" stroke="white" stroke-width="2"/>
+                  <path id="Subtract" d="M23.7368 24C23.7368 17.7214 18.647 12.6316 12.3684 12.6316C6.08982 12.6316 1 17.7214 1 24" stroke="white" stroke-width="2"/>
+                </svg>
+                <span class="h6">Empleados</span>
+                </a>
+                <div class="indicador">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+          </ul>
+          <form action="">
+          <button class="btn text-light navbar_btn-cerrar_sesion">
+            <svg class="icon-cerrarSesion" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="Vector" d="M16 21.3333C15.6464 21.3333 15.3073 21.4738 15.0572 21.7239C14.8072 21.9739 14.6667 22.313 14.6667 22.6667C14.6667 23.0203 14.8072 23.3594 15.0572 23.6095C15.3073 23.8595 15.6464 24 16 24H22.6667C23.3739 24 24.0522 23.719 24.5523 23.219C25.0524 22.7189 25.3334 22.0406 25.3334 21.3333V2.66667C25.3334 1.95942 25.0524 1.28115 24.5523 0.781048C24.0522 0.280951 23.3739 0 22.6667 0H16C15.6464 0 15.3073 0.140476 15.0572 0.390524C14.8072 0.640573 14.6667 0.979711 14.6667 1.33333C14.6667 1.68696 14.8072 2.02609 15.0572 2.27614C15.3073 2.52619 15.6464 2.66667 16 2.66667H22.6667V21.3333H16Z" fill="white"/>
+              <path id="Vector_2" d="M18.2853 12.9333C18.5292 12.6854 18.6661 12.3518 18.6667 12.004V11.996C18.666 11.6437 18.5255 11.3061 18.276 11.0573L12.9427 5.72401C12.8197 5.59666 12.6725 5.49508 12.5099 5.4252C12.3472 5.35533 12.1722 5.31854 11.9952 5.31701C11.8182 5.31547 11.6426 5.3492 11.4787 5.41624C11.3149 5.48329 11.166 5.58229 11.0408 5.70748C10.9156 5.83267 10.8166 5.98154 10.7496 6.1454C10.6825 6.30926 10.6488 6.48484 10.6503 6.66188C10.6519 6.83891 10.6887 7.01387 10.7585 7.17655C10.8284 7.33922 10.93 7.48634 11.0573 7.60934L14.1147 10.6667H1.33333C0.979711 10.6667 0.640573 10.8071 0.390524 11.0572C0.140476 11.3072 0 11.6464 0 12C0 12.3536 0.140476 12.6928 0.390524 12.9428C0.640573 13.1929 0.979711 13.3333 1.33333 13.3333H14.1147L11.0573 16.3907C10.93 16.5137 10.8284 16.6608 10.7585 16.8235C10.6887 16.9861 10.6519 17.1611 10.6503 17.3381C10.6488 17.5152 10.6825 17.6907 10.7496 17.8546C10.8166 18.0185 10.9156 18.1673 11.0408 18.2925C11.166 18.4177 11.3149 18.5167 11.4787 18.5838C11.6426 18.6508 11.8182 18.6845 11.9952 18.683C12.1722 18.6815 12.3472 18.6447 12.5099 18.5748C12.6725 18.5049 12.8197 18.4034 12.9427 18.276L18.276 12.9427L18.2853 12.9333Z" fill="white"/>
+            </svg>
+              Cerrar sesión
+          </button>
+          </form>
+      </nav>
+      <div id="navbar-desplegar" onclick="quitarNavbar()" class=" d-lg-none">
+          <div class="btn-logo">
+            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M1.75453 1.12215C1.88109 0.954967 2.00727 0.77932 2.11206 0.626207C2.94463 1.29742 4.83997 2.4611 5.79641 1.77245C4.91829 1.72456 3.02811 1.30312 2.49126 0.00057892C2.49212 0.000195897 2.49291 0 2.49361 0C2.51001 0 3.39043 0.15858 4.45017 0.352308C6.79276 0.780709 8.16461 1.09949 9.50836 1.52769C11.463 2.15043 12.2363 2.60158 13.6834 3.96348C14.0754 4.33245 14.8125 4.91333 15.3212 5.25447C17.3406 6.60844 18.7643 7.93427 18.8556 8.54604C18.9031 8.86381 18.8715 8.94294 18.6245 9.12519C18.4435 9.25868 18.2393 9.59037 18.0694 10.027C17.6763 11.0367 17.641 11.0845 16.5436 12.0911C15.5708 12.9832 15.262 13.204 14.778 13.3529C14.567 13.4178 14.5489 13.3914 14.5489 13.0209C14.5489 12.7143 14.6214 12.5411 14.8532 12.2935C15.0205 12.1148 15.2102 11.7928 15.2748 11.5777C15.3766 11.2388 15.3621 11.113 15.1658 10.6306C14.5625 9.14754 12.7608 8.02194 10.9996 8.02773C10.1593 8.03047 9.59043 8.27144 9.19106 8.79371C8.92324 9.14389 8.89737 9.25025 8.89737 9.99997C8.89737 10.7281 8.93668 10.9018 9.24023 11.5177C9.64938 12.3474 10.6569 13.419 11.303 13.7115C11.7938 13.9337 12.5095 13.9814 12.6875 13.8039C12.7716 13.7199 12.8308 13.7931 12.9129 14.0832C13.0211 14.4645 13.0132 14.4859 12.6562 14.7898C12.2891 15.1022 11.3562 15.6098 10.6794 15.8653C10.4748 15.9425 9.91089 15.9999 9.35561 16C8.5034 16.0002 8.32764 15.968 7.87908 15.7299C7.08837 15.3101 6.47811 14.5751 6.34858 13.8865L6.27984 13.521L6.97656 13.4908C7.50944 13.4676 7.68041 13.4234 7.70342 13.3027C7.76992 12.9545 6.51049 11.9014 5.27652 11.2733C4.82969 11.0459 4.36351 10.6129 3.71282 9.82057C3.59127 9.67263 3.46929 9.53992 3.37749 9.45274C2.69001 6.36929 4.95236 4.62207 6.23096 4.11976C2.57313 4.57699 2.62149 8.13429 3.10866 9.88588C3.05556 9.95437 2.92268 9.95568 2.59035 9.95568C2.10014 9.95568 1.95901 10.0087 1.3579 10.4193C0.984598 10.6743 0.66587 10.8686 0.649783 10.8511C0.633591 10.8335 0.494796 10.3392 0.341338 9.7525C0.107539 8.85893 0.0549948 8.41377 0.01752 7.00961C-0.0236185 5.47095 -0.00651107 5.25315 0.225659 4.3549C0.529826 3.17799 1.08205 2.01044 1.75453 1.12215ZM12.1038 3.75827C12.3564 3.9203 12.7465 4.24234 12.9706 4.47396L13.3779 4.89505L12.9718 4.72834C12.3673 4.48026 11.6977 4.02535 11.2395 3.55154L10.8321 3.13045L11.2382 3.29716C11.4616 3.38879 11.851 3.59634 12.1038 3.75827Z" fill="white"/>
+            </svg>
+          </div>
+          <button
+          type="button"
+          class="btn-close btn-close-white"
+          aria-label="Close"
+          onclick=""
+        ></button>
+      </div>
+    <!-- \navbar -->
+    <!-- seccion datos -->
+    <section class="container_datos col-12 col-lg-10 offset-lg-2 h-100 px-3 px-lg-5">
+    <form action="" class="container_datos-input_buscar pt-3 mb-2">
+      <div class="col-12 form-floating position-relative">
+        <input
+          placeholder="Id_cliente:"
+          type="search"
+          required
+          class="form-control"
+          name="buscar_cliente"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing"
+        />
+        <label for="floatingInput">Ingresa el id del cliente</label>
+        <div class="container_datos-input_buscar-group_buttons d-flex mt-2 pt-1 position-absolute top-0 end-0">
+          <button class="button mx-2">
+            buscar
+          </button>
+          <button type="reset" class="button me-2 btn-outline-primary">
+            Limpiar
+          </button>
+        </div>
+          
+      </div>
+    </form>
+    <div class="container_datos-forms">
+      <!-- CRUD -->
+    <div class="container_datos-forms-crud d-flex justify-content-between position-relative "
+      role="group"
+      aria-label="Basic radio toggle button group"
+    >
+      <!-- radio botones -->
+      <input
+        type="radio"
+        class="btn-check"
+        name="crud"
+        id="btnradio1"
+        autocomplete="off"
+      />
+      <label
+        class="
+          btn
+          fw-bolder
+          shadow-sm
+          text-dark
+          w-100
+           btn-outline-primary--agregar
+        "
+        for="btnradio1"
+        >Agregar</label
+      >
+      <input
+        type="radio"
+        class="btn-check"
+        name="crud"
+        id="btnradio2"
+        autocomplete="off"
+      />
+      <label
+        class="btn fw-bolder shadow-sm w-100 btn-outline--secondary mx-2"
+        for="btnradio2"
+        >Actualizar</label
+      >
+      <input
+        type="radio"
+        class="btn-check"
+        name="crud"
+        id="btnradio3"
+        autocomplete="off"
+      />
+      <label
+        class="btn fw-bolder shadow-sm w-100 btn-outline--danger"
+        for="btnradio3"
+        >Eliminar</label
+      >
+      <!-- /radio botones -->
+      <!-- Formularios -->
+      <div
+        class="
+          d-none
+          shadow
+          rounded
+          sec1
+          position-absolute
+          w-100
+          bg-light
+          pt-3
+          pb-2
+          mt-2
+        "
+      >
+        <button
+          type="button"
+          class="btn-close d-lg-none position-absolute end-0 top-0 mt-2 me-2"
+          aria-label="Close"
+          onclick="quitarChecked()"
+        ></button>
+        <h3 class="text-center">Agregar cliente</h3>
+        <div>
+          <form
+            action=""
+            method="post"
+            enctype="multipart/form-data"
+            class="d-flex flex-column align-items-center"
+          >
+            <div class="row px-3 g-1">
+              <div class="col-6 form-floating">
+                <input
+                  placeholder="Id_cliente"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="id_cliente"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                />
+                <label for="floatingInput">Id_cliente</label>
+              </div>
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
+                  required
+                >
+                  <option selected>Seleccione</option>
+                  <option value="persona_natural">Persona natural</option>
+                  <option value="empresa">Empresa</option>
+                </select>
+                <label for="floatingInput">Tipo cliente</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Nombre"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="Nombre"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Nombre</label>
+              </div>
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
+                  required
+                >
+                  <option selected>Seleccione</option>
+                  <option value="dni">DNI</option>
+                  <option value="ruc">RUC</option>
+                </select>
+                <label for="floatingInput">Tipo documento</label>
+              </div>
+              <div class="col-6 form-floating">
+                <input
+                  placeholder="#documento"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="#documento"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                />
+                <label for="floatingInput">#Documento</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Direción"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="direccion"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Direción</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Telefono"
+                  type="tel"
+                  required
+                  class="form-control"
+                  name="telefono"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Telefono</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Correo electronico"
+                  type="email"
+                  required
+                  class="form-control"
+                  name="correo"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Correo electronico</label>
+              </div>
+            </div>
+            <input
+              type="submit"
+              name="acc"
+              value="Registrar"
+              class="btn btn btn-primary w-75 btn-lg my-2"
+            />
+          </form>
+        </div>
+      </div>
+      <div
+        class="
+          d-none
+          shadow
+          rounded
+          sec2
+          position-absolute
+          w-100
+          bg-light
+          pt-3
+          pb-2
+          mt-2
+        "
+      >
+        <button
+          type="button"
+          class="btn-close d-lg-none position-absolute end-0 top-0 mt-2 me-2"
+          aria-label="Close"
+          onclick="quitarChecked()"
+        ></button>
+        <h3 class="text-center">Actualizar Cliente</h3>
+        <div>
+          <form
+            action=""
+            method="post"
+            class="d-flex flex-column align-items-center"
+          >
+          <div class="row px-3 g-1">
+            <div class="col-6 form-floating">
+              <input
+                placeholder="Id_cliente"
+                type="text"
+                required
+                class="form-control"
+                name="id_cliente"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+              />
+              <label for="floatingInput">Id_cliente</label>
+            </div>
+            <div class="col-6 form-floating">
+              <select
+                class="form-select form-control"
+                aria-label="Default select example"
+                name="Categoria"
+                required
+              >
+                <option selected>Seleccione</option>
+                <option value="persona_natural">Persona natural</option>
+                <option value="empresa">Empresa</option>
+              </select>
+              <label for="floatingInput">Tipo cliente</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Nombre"
+                type="text"
+                required
+                class="form-control"
+                name="Nombre"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="col-6 form-floating">
+              <select
+                class="form-select form-control"
+                aria-label="Default select example"
+                name="Categoria"
+                required
+              >
+                <option selected>Seleccione</option>
+                <option value="dni">DNI</option>
+                <option value="ruc">RUC</option>
+              </select>
+              <label for="floatingInput">Tipo documento</label>
+            </div>
+            <div class="col-6 form-floating">
+              <input
+                placeholder="#documento"
+                type="text"
+                required
+                class="form-control"
+                name="#documento"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+              />
+              <label for="floatingInput">#Documento</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Direción"
+                type="text"
+                required
+                class="form-control"
+                name="direccion"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Direción</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Telefono"
+                type="tel"
+                required
+                class="form-control"
+                name="telefono"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Telefono</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Correo electronico"
+                type="email"
+                required
+                class="form-control"
+                name="correo"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Correo electronico</label>
+            </div>
+          </div>
+            <input
+              type="submit"
+              class="btn btn btn-secondary w-75 my-2 btn-lg"
+              name="acc"
+              value="Actualizar"
+            />
+          </form>
+        </div>
+      </div>
+      <div
+        class="
+          d-none
+          shadow
+          rounded
+          sec3
+          position-absolute
+          w-100
+          bg-light
+          pt-3
+          pb-2
+          mt-2
+        "
+      >
+        <button
+          type="button"
+          class="btn-close d-lg-none position-absolute end-0 top-0 mt-2 me-2"
+          aria-label="Close"
+          onclick="quitarChecked()"
+        ></button>
+        <h3 class="text-center">Eliminar Cliente</h3>
+        <div>
+          <form
+            action=""
+            method="post"
+            class="d-flex flex-column align-items-center px-3"
+          >
+            <div class="col-9 col-md-7 mt-2 form-floating">
+              <input
+                placeholder="Id_cliente"
+                name="Codigo"
+                required
+                type="text"
+                class="form-control"
+                maxlength="5"
+              />
+              <label for="floatingInput">Id_cliente:</label>
+            </div>
+            <input
+              type="submit"
+              class="btn btn btn-danger w-75 m-3 btn-lg"
+              name="acc"
+              value="Eliminar"
+            />
+          </form>
+        </div>
+      </div>
+      <!-- /Formularios -->
+    </div>
+    <!-- \CRUD -->
+    <!-- detalles -->
+    <div class="container_datos-vista_detalles">
+      <div class="container_datos-vista_detalles-head pt-4">
+        <h4>
+          Detalle cliente
+        </h4>
+      </div>
+      <div class="container_datos-vista_detalles-vista">
+        <div class="row g-1">
+              <div class="col-6 form-floating">
+                <input
+                  placeholder="Id_cliente"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="id_cliente"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                disabled/>
+                <label for="floatingInput">Id_cliente</label>
+              </div>
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
+                  required disabled
+                >
+                  <option selected>Seleccione</option>
+                  <option value="persona_natural">Persona natural</option>
+                  <option value="empresa">Empresa</option>
+                </select>
+                <label for="floatingInput">Tipo cliente</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Nombre"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="Nombre"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                  disabled
+                />
+                <label for="floatingInput">Nombre</label>
+              </div>
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
+                  required disabled
+                >
+                  <option selected>Seleccione</option>
+                  <option value="dni">DNI</option>
+                  <option value="ruc">RUC</option>
+                </select>
+                <label for="floatingInput">Tipo documento</label>
+              </div>
+              <div class="col-6 form-floating">
+                <input
+                  placeholder="#documento"
+                  type="text"
+                  required disabled
+                  class="form-control"
+                  name="#documento"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                />
+                <label for="floatingInput">#Documento</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Direción"
+                  type="text"
+                  required disabled
+                  class="form-control"
+                  name="direccion"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Direción</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Telefono"
+                  type="tel"
+                  required disabled
+                  class="form-control"
+                  name="telefono"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Telefono</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Correo electronico"
+                  type="email"
+                  required disabled
+                  class="form-control"
+                  name="correo"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Correo electronico</label>
+              </div>
+        </div>
+      </div>
+      <a href="#tablas" class="btn button">
+        ver mas clientes
+      </a>
+    </div>
+    <!-- \detalles -->
+    </div>
+    <!-- seccion tabla -->
+    <div id="tablas" class="container_datos-tabla pt-5 mt-5 pb-3">
+      <h3>
+        Lista de clientes
+      </h3>
+      <div class="container_datos-tabla_tabla overflow-auto">
+        <div class="table-reposible w-100">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Id_Cliente</th>
+                <th>Nombre</th>
+                <th>#Documento</th>
+                <th>Dirección</th>
+                <th>Telefono</th>
+                <th>Ampliar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td ><button class="btn button">ver detalles</button></td>
+              <tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- \seccion tabla -->
+    </section>
+    <!-- \seccion datos -->
+    <!-- funcion de radio buttons -->
+    <script src="./js/radiobuttons.js"></script>
+    <!-- \funcion de radio buttons -->
+    <!-- navbar desplegable -->
+    <script src="./js/navbar.js"></script>
+    <!-- \navbar desplegable -->
+  </body>
+</html>

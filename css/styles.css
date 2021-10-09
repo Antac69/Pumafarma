@@ -3,16 +3,16 @@
   --var-font-rubik: "Rubik", sans-serif;
   --var-color-prin: #004d61;
   --var-color-sec: #ff502f;
-  --var-color-celeste: #5BD1D7;
-  --var-color-celeste--claro: #EAF5FF;
-  --var-color-celeste--oscuro: #A9C6DE;
+  --var-color-celeste: #5bd1d7;
+  --var-color-celeste--claro: #eaf5ff;
+  --var-color-celeste--oscuro: #a9c6de;
   --var-color-verde: #348498;
-  --var-color-texto--pendiente: #5C4806;
-  --var-color-fondo--pendiente: #FFE799;
-  --var-color-texto--finalizado: #07252D;
-  --var-color-fondo--finalizado: #A2DEED;
-  --var-color-texto--cancelado: #4E1B12;
-  --var-color-fondo--cancelado: #F3A89A;
+  --var-color-texto--pendiente: #5c4806;
+  --var-color-fondo--pendiente: #ffe799;
+  --var-color-texto--finalizado: #07252d;
+  --var-color-fondo--finalizado: #a2deed;
+  --var-color-texto--cancelado: #4e1b12;
+  --var-color-fondo--cancelado: #f3a89a;
 }
 
 body {
@@ -34,7 +34,9 @@ body {
   color: white;
 }
 
-button, .btn, [type=submit] {
+button,
+.btn,
+[type="submit"] {
   font-family: var(--var-font-roboto);
   font-style: normal;
   font-weight: 500;
@@ -342,7 +344,9 @@ h6,
 }
 
 /* funcionamiento de radiobuttons forms */
-#btnradio1:checked ~ .sec1, #btnradio2:checked ~ .sec2, #btnradio3:checked ~ .sec3 {
+#btnradio1:checked ~ .sec1,
+#btnradio2:checked ~ .sec2,
+#btnradio3:checked ~ .sec3 {
   display: block !important;
   top: 110%;
 }
@@ -357,6 +361,7 @@ h6,
   -ms-flex-line-pack: baseline;
       align-content: baseline;
   gap: 28px;
+  overflow-x: hidden;
 }
 
 /* logo svg */
@@ -374,7 +379,7 @@ h6,
 /* \logo svg */
 /* datos usuario */
 .navbar_usuario {
-  background: #EAF5FF25;
+  background: #eaf5ff25;
   padding: 8px 16px;
   border-radius: 8px;
   display: -webkit-box;
@@ -395,7 +400,7 @@ h6,
 }
 
 .nombre-usuario::before {
-  content: '@';
+  content: "@";
   position: absolute;
   left: -13px;
   top: -2px;
@@ -427,7 +432,77 @@ h6,
   margin-top: 2px;
 }
 
-.icon-inicio > path, .icon-ventas > path, .icon-cliente > path, .icon-pedido > path, .icon-empleado > path {
+.navbar-links li {
+  padding-left: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-links li a.active, .navbar-links li a:hover {
+  color: var(--var-color-prin);
+}
+
+.navbar-links li a.active [class^=icon-] > *, .navbar-links li a:hover [class^=icon-] > * {
+  stroke: var(--var-color-prin);
+}
+
+.navbar-links li a.active .icon-pedido > path, .navbar-links li a:hover .icon-pedido > path {
+  stroke: none;
+  fill: var(--var-color-prin);
+}
+
+.navbar-links li a.active + .indicador, .navbar-links li a:hover + .indicador {
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  margin-left: -12px;
+  border-radius: 20px 0 0 20px;
+  top: -4px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.navbar-links li a.active + .indicador::after, .navbar-links li a:hover + .indicador::after {
+  content: '';
+  display: block;
+  background: white;
+  position: absolute;
+  height: 180%;
+  width: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+}
+
+.navbar-links li a.active + .indicador > span:nth-child(1), .navbar-links li a:hover + .indicador > span:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  background: var(--var-color-prin);
+  position: absolute;
+  top: -20px;
+  right: 15px;
+  z-index: 1;
+  border-radius: 0 0 20px 0;
+}
+
+.navbar-links li a.active + .indicador > span:nth-child(2), .navbar-links li a:hover + .indicador > span:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  background: var(--var-color-prin);
+  position: absolute;
+  bottom: -20px;
+  right: 15px;
+  z-index: 1;
+  border-radius: 0 20px 0 0;
+}
+
+.icon-inicio > path,
+.icon-ventas > path,
+.icon-cliente > path,
+.icon-pedido > path,
+.icon-empleado > path {
   stroke: white;
 }
 
@@ -452,7 +527,7 @@ h6,
 @media screen and (max-width: 768px) {
   .logo {
     width: 100%;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
   }
   .h3-rubick {
     font-size: 28px;

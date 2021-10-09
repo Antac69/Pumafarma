@@ -785,6 +785,10 @@ h6,
   color: #004d61;
 }
 
+.container_datos-tabla {
+  margin-top: 100vh !important;
+}
+
 /* \clientes */
 /* Resposive */
 @media screen and (max-width: 768px) {

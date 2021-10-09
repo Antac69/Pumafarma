@@ -29,7 +29,7 @@
     />
     <!-- custom css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Cliente</title>
+    <title>Empleados</title>
   </head>
   <body>
     <!-- navbar -->
@@ -149,15 +149,15 @@
     <form action="" class="container_datos-input_buscar pt-3 mb-2">
       <div class="col-12 form-floating position-relative">
         <input
-          placeholder="Id_cliente:"
+          placeholder="Id_empleado:"
           type="search"
           required
           class="form-control"
-          name="buscar_cliente"
+          name="buscar_empleado"
           aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing"
         />
-        <label for="floatingInput">Ingresa el id del cliente</label>
+        <label for="floatingInput">Ingresa el id del empleado</label>
         <div class="container_datos-input_buscar-group_buttons d-flex mt-2 pt-1 position-absolute top-0 end-0">
           <button class="button mx-2">
             buscar
@@ -241,7 +241,7 @@
           aria-label="Close"
           onclick="quitarChecked()"
         ></button>
-        <h3 class="text-center">Agregar cliente</h3>
+        <h3 class="text-center">Agregar empleado</h3>
         <div>
           <form
             action=""
@@ -252,15 +252,15 @@
             <div class="row px-3 g-1">
               <div class="col-6 form-floating">
                 <input
-                  placeholder="Id_cliente"
+                  placeholder="Id_empleado"
                   type="text"
                   required
                   class="form-control"
-                  name="id_cliente"
+                  name="id_empleado"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing"
                 />
-                <label for="floatingInput">Id_cliente</label>
+                <label for="floatingInput">Id_empleado</label>
               </div>
               <div class="col-6 form-floating">
                 <select
@@ -667,7 +667,7 @@
         </div>
       </div>
       <a href="#tablas" class="btn button">
-        ver mas clientes
+        ver mas empleados
       </a>
     </div>
     <!-- \detalles -->
@@ -675,17 +675,16 @@
     <!-- seccion tabla -->
     <div id="tablas" class="container_datos-tabla pt-5 mt-5 pb-3">
       <h3>
-        Lista de clientes
+        Lista de empleados
       </h3>
       <div class="container_datos-tabla_tabla overflow-auto">
         <div class="table-reposible w-100">
           <table class="table table-hover">
             <thead>
               <tr>
-                <th>Id_Cliente</th>
+                <th>Id_Usuario</th>
                 <th>Nombre</th>
-                <th>#Documento</th>
-                <th>Dirección</th>
+                <th>#DNI</th>
                 <th>Telefono</th>
                 <th>Ampliar</th>
               </tr>
@@ -695,7 +694,6 @@
                 <td>1</td>
                 <td>2</td>
                 <td>12</td>
-                <td>01-10-21</td>
                 <td>223</td>
                 <td ><button class="btn button">ver detalles</button></td>
               <tr>
@@ -703,7 +701,6 @@
                 <td>1</td>
                 <td>2</td>
                 <td>12</td>
-                <td>01-10-21</td>
                 <td>223</td>
                 <td ><button class="btn button">ver detalles</button></td>
               <tr>
@@ -711,7 +708,6 @@
                 <td>1</td>
                 <td>2</td>
                 <td>12</td>
-                <td>01-10-21</td>
                 <td>223</td>
                 <td ><button class="btn button">ver detalles</button></td>
               <tr>
@@ -719,7 +715,6 @@
                 <td>1</td>
                 <td>2</td>
                 <td>12</td>
-                <td>01-10-21</td>
                 <td>223</td>
                 <td ><button class="btn button">ver detalles</button></td>
               <tr>
@@ -727,7 +722,6 @@
                 <td>1</td>
                 <td>2</td>
                 <td>12</td>
-                <td>01-10-21</td>
                 <td>223</td>
                 <td ><button class="btn button">ver detalles</button></td>
               <tr>
@@ -735,23 +729,6 @@
                 <td>1</td>
                 <td>2</td>
                 <td>12</td>
-                <td>01-10-21</td>
-                <td>223</td>
-                <td ><button class="btn button">ver detalles</button></td>
-              <tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>12</td>
-                <td>01-10-21</td>
-                <td>223</td>
-                <td ><button class="btn button">ver detalles</button></td>
-              <tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>12</td>
-                <td>01-10-21</td>
                 <td>223</td>
                 <td ><button class="btn button">ver detalles</button></td>
               <tr>

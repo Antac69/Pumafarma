@@ -41,7 +41,7 @@ button,
   font-style: normal;
   font-weight: 500;
   font-size: 0.874rem;
-  /*   line-height: 1rem; */
+  line-height: normal;
   letter-spacing: 0.078125rem;
   text-transform: uppercase;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 77, 97, 0.25) !important;
@@ -75,6 +75,9 @@ button,
   color: white;
   -webkit-animation: 1s ease-in-out;
           animation: 1s ease-in-out;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .button:hover {
@@ -351,6 +354,7 @@ h6,
 #btnradio2:checked ~ .sec2,
 #btnradio3:checked ~ .sec3 {
   display: block !important;
+  z-index: 1;
   top: 110%;
 }
 
@@ -754,6 +758,9 @@ h6,
   }
   .subcontainer_login_formulario form {
     width: 100%;
+  }
+  .subtitle_login {
+    font-size: 14px;
   }
 }
 

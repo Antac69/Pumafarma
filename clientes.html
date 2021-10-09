@@ -58,7 +58,7 @@
           </div>
           <ul class="navbar-links">
               <li>
-                <a class="active" href="./inicio.html">
+                <a href="./inicio.html">
                   <svg class="icon-inicio" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path id="icon-inicio" d="M22.7313 12.3535V12.3536V21.6295C22.7313 21.9926 22.5869 22.3411 22.3295 22.5982C22.0721 22.8553 21.7227 23 21.3582 23H2.37313C2.0086 23 1.65922 22.8553 1.40179 22.5982C1.1444 22.3411 1 21.9926 1 21.6295V12.3536V12.3535C0.999946 11.8444 1.10393 11.3407 1.30563 10.8731C1.50732 10.4055 1.8025 9.98391 2.17312 9.63414L2.17323 9.63403L10.9218 1.37513L10.9219 1.375C11.1768 1.13429 11.5145 1 11.8657 1C12.2169 1 12.5545 1.13429 12.8094 1.375L12.8095 1.37513L21.5581 9.63403L21.5582 9.63414C21.9288 9.98391 22.224 10.4055 22.4257 10.8731C22.6274 11.3407 22.7314 11.8444 22.7313 12.3535Z" stroke="#004D61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -82,7 +82,7 @@
                 </div>
               </li>
               <li>
-                <a href="./clientes.html">
+                <a class="active" href="./clientes.html">
                 <svg class="icon-cliente" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle id="Ellipse 1" cx="12.3684" cy="6.31579" r="5.31579" stroke="white" stroke-width="2"/>
                   <path id="Subtract" d="M23.7368 24C23.7368 17.7214 18.647 12.6316 12.3684 12.6316C6.08982 12.6316 1 17.7214 1 24" stroke="white" stroke-width="2"/>
@@ -144,7 +144,33 @@
         ></button>
       </div>
     <!-- \navbar -->
-    <!-- CRUD -->
+    <!-- seccion datos -->
+    <section class="container_datos col-12 col-lg-10 offset-lg-2 h-100 px-3 px-lg-5">
+    <form action="" class="container_datos-input_buscar pt-3 mb-2">
+      <div class="col-12 form-floating position-relative">
+        <input
+          placeholder="Id_cliente:"
+          type="search"
+          required
+          class="form-control"
+          name="buscar_cliente"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing"
+        />
+        <label for="floatingInput">Ingresa el id del cliente</label>
+        <div class="container_datos-input_buscar-group_buttons d-flex mt-2 pt-1 position-absolute top-0 end-0">
+          <button class="button mx-2">
+            buscar
+          </button>
+          <button type="reset" class="button me-2 btn-outline-primary">
+            Limpiar
+          </button>
+        </div>
+          
+      </div>
+    </form>
+    <div class="container_datos-forms">
+      <!-- CRUD -->
     <div
       class="d-flex justify-content-between position-relative w-100"
       role="group"
@@ -227,7 +253,7 @@
             <div class="row px-3 g-1">
               <div class="col-6 form-floating">
                 <input
-                  placeholder="Id_cliente:"
+                  placeholder="Id_cliente"
                   type="text"
                   required
                   class="form-control"
@@ -235,7 +261,7 @@
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing"
                 />
-                <label for="floatingInput">Id_cliente:</label>
+                <label for="floatingInput">Id_cliente</label>
               </div>
               <div class="col-6 form-floating">
                 <select
@@ -250,66 +276,84 @@
                 </select>
                 <label for="floatingInput">Tipo cliente</label>
               </div>
-              <div class="col-6 my-2 form-floating">
+              <div class="col-12 my-2 form-floating">
                 <input
-                  placeholder="Stock"
+                  placeholder="Nombre"
                   type="text"
                   required
                   class="form-control"
-                  name="Stock"
+                  name="Nombre"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing"
                   maxlength="3"
                 />
-                <label for="floatingInput">Stock</label>
+                <label for="floatingInput">Nombre</label>
               </div>
-              <div class="col-6 my-2">
-                <div class="input-group form-floating">
-                  <span class="input-group-text">S/ </span>
-                  <input
-                    placeholder="Precio"
-                    type="text"
-                    required
-                    class="form-control"
-                    name="Precio"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing"
-                    maxlength="6"
-                    onkeyup="this.value=Precios(this.value)"
-                  />
-                  <label for="floatingInput" class="ps-5 ms-2 z-index"
-                    >Precio</label
-                  >
-                </div>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <textarea
-                  placeholder="Descripcion"
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
                   required
-                  class="form-control"
-                  name="Descripcion"
-                  id="floatingTextarea2"
-                  style="height: 125px"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                ></textarea>
-                <label for="floatingInput">Descripción</label>
-              </div>
-              <div class="col-12 my-2">
-                <span class="input-group-text" id="inputGroup-sizing-lg"
-                  >Portada</span
                 >
+                  <option selected>Seleccione</option>
+                  <option value="dni">DNI</option>
+                  <option value="ruc">RUC</option>
+                </select>
+                <label for="floatingInput">Tipo documento</label>
+              </div>
+              <div class="col-6 form-floating">
                 <input
-                  type="file"
+                  placeholder="#documento"
+                  type="text"
                   required
                   class="form-control"
-                  name="Portada"
+                  name="#documento"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing"
                 />
+                <label for="floatingInput">#Documento</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Direción"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="direccion"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Direción</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Telefono"
+                  type="tel"
+                  required
+                  class="form-control"
+                  name="telefono"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Telefono</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Correo electronico"
+                  type="email"
+                  required
+                  class="form-control"
+                  name="correo"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Correo electronico</label>
               </div>
             </div>
-            <input type="hidden" name="cargo" value="admin" />
             <input
               type="submit"
               name="acc"
@@ -339,76 +383,117 @@
           aria-label="Close"
           onclick="quitarChecked()"
         ></button>
-        <h3 class="text-center">Actualizar Libro</h3>
+        <h3 class="text-center">Actualizar Cliente</h3>
         <div>
-          <form action="../../LibroControl" method="post" class="mx-3 mb-2">
-            <div class="d-flex flex-column">
-              <div class="col-12 d-flex justify-content-evenly my-2 px-5">
-                <input type="hidden" name="Codigo" value="<%= fila[0] %>" />
-                <input
-                  type="submit"
-                  name="acc"
-                  class="shadow bg-gradient btn btn-success btn-lg fw-bold w-35"
-                  value="Aceptar Libro"
-                />
-                <input
-                  type="submit"
-                  name="acc"
-                  class="shadow bg-gradient btn btn-danger btn-lg fw-bold"
-                  value="Rechazar Libro"
-                />
-              </div>
-            </div>
-          </form>
           <form
-            action="../../LibroControl"
+            action=""
             method="post"
             class="d-flex flex-column align-items-center"
           >
-            <div class="row px-3 g-1">
-              <div>
-                <input type="hidden" name="Codigo" value="" />
-              </div>
-              <div class="col-6 my-2 form-floating">
-                <input
-                  type="text"
-                  placeholder="Stock"
-                  required
-                  class="form-control"
-                  name="Stock"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                />
-                <label for="floatingInput">Stock</label>
-              </div>
-              <div class="col-6 my-2">
-                <div class="input-group form-floating">
-                  <span class="input-group-text">S/.</span>
-                  <input
-                    placeholder="Precio"
-                    type="text"
-                    name="Precio"
-                    class="form-control"
-                  />
-                  <label for="floatingInput" class="ps-5 ms-3 z-index"
-                    >Precio</label
-                  >
-                </div>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <textarea
-                  placeholder="Descripción"
-                  required
-                  class="form-control"
-                  name="Descripcion"
-                  id="floatingTextarea2"
-                  style="height: 125px"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                ></textarea>
-                <label for="floatingInput">Descripción</label>
-              </div>
+          <div class="row px-3 g-1">
+            <div class="col-6 form-floating">
+              <input
+                placeholder="Id_cliente"
+                type="text"
+                required
+                class="form-control"
+                name="id_cliente"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+              />
+              <label for="floatingInput">Id_cliente</label>
             </div>
+            <div class="col-6 form-floating">
+              <select
+                class="form-select form-control"
+                aria-label="Default select example"
+                name="Categoria"
+                required
+              >
+                <option selected>Seleccione</option>
+                <option value="persona_natural">Persona natural</option>
+                <option value="empresa">Empresa</option>
+              </select>
+              <label for="floatingInput">Tipo cliente</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Nombre"
+                type="text"
+                required
+                class="form-control"
+                name="Nombre"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="col-6 form-floating">
+              <select
+                class="form-select form-control"
+                aria-label="Default select example"
+                name="Categoria"
+                required
+              >
+                <option selected>Seleccione</option>
+                <option value="dni">DNI</option>
+                <option value="ruc">RUC</option>
+              </select>
+              <label for="floatingInput">Tipo documento</label>
+            </div>
+            <div class="col-6 form-floating">
+              <input
+                placeholder="#documento"
+                type="text"
+                required
+                class="form-control"
+                name="#documento"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+              />
+              <label for="floatingInput">#Documento</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Direción"
+                type="text"
+                required
+                class="form-control"
+                name="direccion"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Direción</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Telefono"
+                type="tel"
+                required
+                class="form-control"
+                name="telefono"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Telefono</label>
+            </div>
+            <div class="col-12 my-2 form-floating">
+              <input
+                placeholder="Correo electronico"
+                type="email"
+                required
+                class="form-control"
+                name="correo"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Correo electronico</label>
+            </div>
+          </div>
             <input
               type="submit"
               class="btn btn btn-secondary w-75 my-2 btn-lg"
@@ -438,10 +523,10 @@
           aria-label="Close"
           onclick="quitarChecked()"
         ></button>
-        <h3 class="text-center">Eliminar Libro</h3>
+        <h3 class="text-center">Eliminar Cliente</h3>
         <div>
           <form
-            action="../../LibroControl"
+            action=""
             method="post"
             class="d-flex flex-column align-items-center px-3"
           >
@@ -467,6 +552,200 @@
       </div>
       <!-- /Formularios -->
     </div>
+    <!-- \CRUD -->
+    <!-- detalles -->
+    <div class="container_datos-vista_detalles">
+      <div class="container_datos-vista_detalles-head pt-4">
+        <h4>
+          Detalle cliente
+        </h4>
+      </div>
+      <div class="container_datos-vista_detalles-vista">
+        <div class="row g-1">
+              <div class="col-6 form-floating">
+                <input
+                  placeholder="Id_cliente"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="id_cliente"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                disabled/>
+                <label for="floatingInput">Id_cliente</label>
+              </div>
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
+                  required disabled
+                >
+                  <option selected>Seleccione</option>
+                  <option value="persona_natural">Persona natural</option>
+                  <option value="empresa">Empresa</option>
+                </select>
+                <label for="floatingInput">Tipo cliente</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Nombre"
+                  type="text"
+                  required
+                  class="form-control"
+                  name="Nombre"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                  disabled
+                />
+                <label for="floatingInput">Nombre</label>
+              </div>
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select form-control"
+                  aria-label="Default select example"
+                  name="Categoria"
+                  required disabled
+                >
+                  <option selected>Seleccione</option>
+                  <option value="dni">DNI</option>
+                  <option value="ruc">RUC</option>
+                </select>
+                <label for="floatingInput">Tipo documento</label>
+              </div>
+              <div class="col-6 form-floating">
+                <input
+                  placeholder="#documento"
+                  type="text"
+                  required disabled
+                  class="form-control"
+                  name="#documento"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                />
+                <label for="floatingInput">#Documento</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Direción"
+                  type="text"
+                  required disabled
+                  class="form-control"
+                  name="direccion"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Direción</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Telefono"
+                  type="tel"
+                  required disabled
+                  class="form-control"
+                  name="telefono"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Telefono</label>
+              </div>
+              <div class="col-12 my-2 form-floating">
+                <input
+                  placeholder="Correo electronico"
+                  type="email"
+                  required disabled
+                  class="form-control"
+                  name="correo"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Correo electronico</label>
+              </div>
+        </div>
+      </div>
+      <a href="#tablas" class="btn button">
+        ver mas clientes
+      </a>
+    </div>
+    <!-- \detalles -->
+    </div>
+    <!-- seccion tabla -->
+    <div id="tablas" class="container_datos-tabla pt-5 mt-5 pb-3">
+      <h3>
+        Lista de clientes
+      </h3>
+      <div class="container_datos-tabla_tabla overflow-auto">
+        <div class="table-reposible w-100">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Id_Venta</th>
+                <th>Id_Empleado</th>
+                <th>Id_Cliente</th>
+                <th>#Comprobante</th>
+                <th>Fecha</th>
+                <th>Precio</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>20109109221</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td data-estado="estado">Pendiente</td>
+              </td>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>20109109221</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td data-estado="estado">Finalizado</td>
+              </td>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>20109109221</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td data-estado="estado">Cancelado</td>
+              </td>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>20109109221</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td data-estado="estado">Pendiente</td>
+              </td>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>20109109221</td>
+                <td>01-10-21</td>
+                <td>223</td>
+                <td data-estado="estado">Finalizado</td>
+              </td>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- \seccion tabla -->
+    </section>
+    <!-- \seccion datos -->
     <!-- funcion de radio buttons -->
     <script src="./js/radiobuttons.js"></script>
     <!-- \funcion de radio buttons -->

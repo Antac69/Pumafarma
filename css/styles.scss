@@ -327,14 +327,49 @@ h6,
   color: white;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
 }
 .nombre-usuario{
+  position: relative;
   &::before {
     content: '@';
-    display: flex;
+    position: absolute;
+    left: -13px;
+    top: -2px;
   }
 }
 /* \datos usuario */
+/* navbar-links */
+  .navbar-links{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    position: relative;
+    a{
+    color: white;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(2,min-content);
+    gap: 20px;
+    span{
+      margin-top: 2px;
+    }
+    }
+  }
+  .icon-inicio>path,.icon-ventas>path,.icon-cliente>path,.icon-pedido>path,.icon-empleado>path{
+    stroke: white;
+  }
+  .navbar_btn-cerrar_sesion{
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: start;
+    svg{
+      margin-right: 28px;
+    }
+  }
+/* \navbar-links */
 /* \navbar */
 
 /* Resposive */

@@ -387,16 +387,66 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  pointer-events: none;
+}
+
+.nombre-usuario {
+  position: relative;
 }
 
 .nombre-usuario::before {
   content: '@';
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  left: -13px;
+  top: -2px;
 }
 
 /* \datos usuario */
+/* navbar-links */
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  position: relative;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (min-content)[2];
+      grid-template-columns: repeat(2, -webkit-min-content);
+      grid-template-columns: repeat(2, min-content);
+  gap: 20px;
+}
+
+.navbar-links a span {
+  margin-top: 2px;
+}
+
+.icon-inicio > path, .icon-ventas > path, .icon-cliente > path, .icon-pedido > path, .icon-empleado > path {
+  stroke: white;
+}
+
+.navbar_btn-cerrar_sesion {
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.navbar_btn-cerrar_sesion svg {
+  margin-right: 28px;
+}
+
+/* \navbar-links */
 /* \navbar */
 /* Resposive */
 @media screen and (max-width: 768px) {

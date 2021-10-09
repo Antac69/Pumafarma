@@ -17,7 +17,7 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: var(--var-font-roboto);
 }
 
@@ -561,6 +561,64 @@ h6,
 
 /* \navbar-links */
 /* \navbar */
+/* seccion de datos inicio */
+/* cards dashbord */
+.container_cards_dashbord {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 20px;
+  gap: 12px;
+}
+
+.container_cards_dashbord .card_dashbord {
+  padding: 16px;
+  -webkit-box-shadow: 0 4px 20px #004d6110;
+          box-shadow: 0 4px 20px #004d6110;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  cursor: pointer;
+  color: var(--var-color-prin);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.container_cards_dashbord .card_dashbord .cad_dashbord-datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_cards_dashbord .card_dashbord .cad_dashbord-datos > span {
+  font-weight: normal;
+}
+
+.container_cards_dashbord .card_dashbord .card_dashbord-titulo {
+  opacity: .75;
+}
+
+.container_cards_dashbord .card_dashbord:hover {
+  background: var(--var-color-prin);
+  color: white;
+}
+
+.container_cards_dashbord .card_dashbord:hover .cad_dashbord-datos svg > path {
+  fill: white;
+}
+
+.container_cards_dashbord .card_dashbord:hover:nth-child(4) .cad_dashbord-datos svg > path {
+  fill: none;
+  stroke: white;
+}
+
+/* \cards dashbord */
+/* \seccion de datos inicio */
 /* Resposive */
 @media screen and (max-width: 768px) {
   .logo {

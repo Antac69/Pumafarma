@@ -17,7 +17,7 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: var(--var-font-roboto);
 }
 
@@ -456,6 +456,47 @@ h6,
 }
 /* \navbar-links */
 /* \navbar */
+
+/* seccion de datos inicio */
+/* cards dashbord */
+  .container_cards_dashbord{
+    display: grid;
+    padding-top: 20px;
+    gap: 12px;
+    .card_dashbord{
+      padding: 16px;
+      box-shadow: 0 4px 20px #004d6110;
+      border-radius: 20px;
+      display: grid;
+      cursor: pointer;
+      color: var(--var-color-prin);
+      transition: .3s ease-in-out;
+      .cad_dashbord-datos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &>span{
+          font-weight: normal;
+      }
+      }
+      .card_dashbord-titulo{
+        opacity: .75;
+      }
+      &:hover{
+        background: var(--var-color-prin);
+        color: white;
+        .cad_dashbord-datos svg>path{
+          fill: white;
+        }
+        &:nth-child(4) .cad_dashbord-datos svg>path{
+          fill: none;
+          stroke: white;
+        }
+      }
+    }
+} 
+/* \cards dashbord */
+/* \seccion de datos inicio */
 
 /* Resposive */
 @media screen and (max-width: 768px) {

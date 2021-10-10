@@ -137,6 +137,30 @@ button,
   color: var(--var-color-texto--cancelado);
 }
 
+/* chip estado */
+[class^=estado-] {
+  background: gray;
+  border: none;
+  padding: .05rem .5rem;
+  border-radius: 20px;
+}
+
+.estado-pendiente {
+  background: var(--var-color-fondo--pendiente);
+  color: var(--var-color-texto--pendiente);
+}
+
+.estado-finalizado {
+  background: var(--var-color-fondo--finalizado);
+  color: var(--var-color-texto--finalizado);
+}
+
+.estado-cancelado {
+  background: var(--var-color-fondo--cancelado);
+  color: var(--var-color-texto--cancelado);
+}
+
+/* \chip estado */
 h1,
 .h1 {
   font-family: var(--var-font-roboto);
@@ -512,7 +536,7 @@ h6,
   background: white;
   position: absolute;
   height: 100%;
-  width: 120%;
+  width: calc(100% + 20px);
   margin-left: -12px;
   border-radius: 1.25rem 0 0 1.25rem;
   top: -4px;
@@ -584,7 +608,7 @@ h6,
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 15px;
+  right: 0;
 }
 
 .navbar-links li a.active + .indicador > span:nth-child(1), .navbar-links li a:hover + .indicador > span:nth-child(1) {
@@ -593,7 +617,7 @@ h6,
   background: var(--var-color-prin);
   position: absolute;
   top: -1.25rem;
-  right: 15px;
+  right: -1.2px;
   z-index: 1;
   border-radius: 0 0 5rem 0;
 }
@@ -604,7 +628,7 @@ h6,
   background: var(--var-color-prin);
   position: absolute;
   bottom: -1.25rem;
-  right: 15px;
+  right: -1.2px;
   z-index: 1;
   border-radius: 0 5rem 0 0;
 }

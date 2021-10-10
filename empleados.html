@@ -270,10 +270,10 @@
                   required
                 >
                   <option selected>Seleccione</option>
-                  <option value="persona_natural">Persona natural</option>
-                  <option value="empresa">Empresa</option>
+                  <option value="admin">Admin</option>
+                  <option value="vendedor">Vendedor</option>
                 </select>
-                <label for="floatingInput">Tipo cliente</label>
+                <label for="floatingInput">Tipo empleado</label>
               </div>
               <div class="col-12 my-2 form-floating">
                 <input
@@ -289,29 +289,29 @@
                 <label for="floatingInput">Nombre</label>
               </div>
               <div class="col-6 form-floating">
-                <select
-                  class="form-select form-control"
-                  aria-label="Default select example"
-                  name="Categoria"
+                <input
+                  placeholder="Telefono"
+                  type="tel"
                   required
-                >
-                  <option selected>Seleccione</option>
-                  <option value="dni">DNI</option>
-                  <option value="ruc">RUC</option>
-                </select>
-                <label for="floatingInput">Tipo documento</label>
+                  class="form-control"
+                  name="telefono"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing"
+                  maxlength="3"
+                />
+                <label for="floatingInput">Telefono</label>
               </div>
               <div class="col-6 form-floating">
                 <input
-                  placeholder="#documento"
+                  placeholder="dni"
                   type="text"
                   required
                   class="form-control"
-                  name="#documento"
+                  name="dni"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing"
                 />
-                <label for="floatingInput">#Documento</label>
+                <label for="floatingInput">DNI</label>
               </div>
               <div class="col-12 my-2 form-floating">
                 <input
@@ -328,29 +328,16 @@
               </div>
               <div class="col-12 my-2 form-floating">
                 <input
-                  placeholder="Telefono"
-                  type="tel"
+                  placeholder="Contraseña"
+                  type="password"
                   required
                   class="form-control"
-                  name="telefono"
+                  name="contra"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing"
                   maxlength="3"
                 />
-                <label for="floatingInput">Telefono</label>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <input
-                  placeholder="Correo electronico"
-                  type="email"
-                  required
-                  class="form-control"
-                  name="correo"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                  maxlength="3"
-                />
-                <label for="floatingInput">Correo electronico</label>
+                <label for="floatingInput">Contraseña</label>
               </div>
             </div>
             <input
@@ -382,7 +369,7 @@
           aria-label="Close"
           onclick="quitarChecked()"
         ></button>
-        <h3 class="text-center">Actualizar Cliente</h3>
+        <h3 class="text-center">Actualizar empleado</h3>
         <div>
           <form
             action=""
@@ -392,15 +379,15 @@
           <div class="row px-3 g-1">
             <div class="col-6 form-floating">
               <input
-                placeholder="Id_cliente"
+                placeholder="Id_empleado"
                 type="text"
                 required
                 class="form-control"
-                name="id_cliente"
+                name="id_empleado"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing"
               />
-              <label for="floatingInput">Id_cliente</label>
+              <label for="floatingInput">Id_empleado</label>
             </div>
             <div class="col-6 form-floating">
               <select
@@ -410,10 +397,10 @@
                 required
               >
                 <option selected>Seleccione</option>
-                <option value="persona_natural">Persona natural</option>
-                <option value="empresa">Empresa</option>
+                <option value="admin">Admin</option>
+                <option value="vendedor">Vendedor</option>
               </select>
-              <label for="floatingInput">Tipo cliente</label>
+              <label for="floatingInput">Tipo empleado</label>
             </div>
             <div class="col-12 my-2 form-floating">
               <input
@@ -429,29 +416,29 @@
               <label for="floatingInput">Nombre</label>
             </div>
             <div class="col-6 form-floating">
-              <select
-                class="form-select form-control"
-                aria-label="Default select example"
-                name="Categoria"
+              <input
+                placeholder="Telefono"
+                type="tel"
                 required
-              >
-                <option selected>Seleccione</option>
-                <option value="dni">DNI</option>
-                <option value="ruc">RUC</option>
-              </select>
-              <label for="floatingInput">Tipo documento</label>
+                class="form-control"
+                name="telefono"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing"
+                maxlength="3"
+              />
+              <label for="floatingInput">Telefono</label>
             </div>
             <div class="col-6 form-floating">
               <input
-                placeholder="#documento"
+                placeholder="dni"
                 type="text"
                 required
                 class="form-control"
-                name="#documento"
+                name="dni"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing"
               />
-              <label for="floatingInput">#Documento</label>
+              <label for="floatingInput">DNI</label>
             </div>
             <div class="col-12 my-2 form-floating">
               <input
@@ -468,29 +455,16 @@
             </div>
             <div class="col-12 my-2 form-floating">
               <input
-                placeholder="Telefono"
-                type="tel"
+                placeholder="Contraseña"
+                type="password"
                 required
                 class="form-control"
-                name="telefono"
+                name="contra"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing"
                 maxlength="3"
               />
-              <label for="floatingInput">Telefono</label>
-            </div>
-            <div class="col-12 my-2 form-floating">
-              <input
-                placeholder="Correo electronico"
-                type="email"
-                required
-                class="form-control"
-                name="correo"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing"
-                maxlength="3"
-              />
-              <label for="floatingInput">Correo electronico</label>
+              <label for="floatingInput">Contraseña</label>
             </div>
           </div>
             <input
@@ -522,7 +496,7 @@
           aria-label="Close"
           onclick="quitarChecked()"
         ></button>
-        <h3 class="text-center">Eliminar Cliente</h3>
+        <h3 class="text-center">Eliminar empleado</h3>
         <div>
           <form
             action=""
@@ -531,14 +505,14 @@
           >
             <div class="col-9 col-md-7 mt-2 form-floating">
               <input
-                placeholder="Id_cliente"
+                placeholder="Id_empleado"
                 name="Codigo"
                 required
                 type="text"
                 class="form-control"
                 maxlength="5"
               />
-              <label for="floatingInput">Id_cliente:</label>
+              <label for="floatingInput">Id_empleado</label>
             </div>
             <input
               type="submit"
@@ -556,114 +530,100 @@
     <div class="container_datos-vista_detalles">
       <div class="container_datos-vista_detalles-head pt-4">
         <h4>
-          Detalle cliente
+          Detalle empleado
         </h4>
       </div>
       <div class="container_datos-vista_detalles-vista">
         <div class="row g-1">
-              <div class="col-6 form-floating">
-                <input
-                  placeholder="Id_cliente"
-                  type="text"
-                  required
-                  class="form-control"
-                  name="id_cliente"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                disabled/>
-                <label for="floatingInput">Id_cliente</label>
-              </div>
-              <div class="col-6 form-floating">
-                <select
-                  class="form-select form-control"
-                  aria-label="Default select example"
-                  name="Categoria"
-                  required disabled
-                >
-                  <option selected>Seleccione</option>
-                  <option value="persona_natural">Persona natural</option>
-                  <option value="empresa">Empresa</option>
-                </select>
-                <label for="floatingInput">Tipo cliente</label>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <input
-                  placeholder="Nombre"
-                  type="text"
-                  required
-                  class="form-control"
-                  name="Nombre"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                  maxlength="3"
-                  disabled
-                />
-                <label for="floatingInput">Nombre</label>
-              </div>
-              <div class="col-6 form-floating">
-                <select
-                  class="form-select form-control"
-                  aria-label="Default select example"
-                  name="Categoria"
-                  required disabled
-                >
-                  <option selected>Seleccione</option>
-                  <option value="dni">DNI</option>
-                  <option value="ruc">RUC</option>
-                </select>
-                <label for="floatingInput">Tipo documento</label>
-              </div>
-              <div class="col-6 form-floating">
-                <input
-                  placeholder="#documento"
-                  type="text"
-                  required disabled
-                  class="form-control"
-                  name="#documento"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                />
-                <label for="floatingInput">#Documento</label>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <input
-                  placeholder="Direción"
-                  type="text"
-                  required disabled
-                  class="form-control"
-                  name="direccion"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                  maxlength="3"
-                />
-                <label for="floatingInput">Direción</label>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <input
-                  placeholder="Telefono"
-                  type="tel"
-                  required disabled
-                  class="form-control"
-                  name="telefono"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                  maxlength="3"
-                />
-                <label for="floatingInput">Telefono</label>
-              </div>
-              <div class="col-12 my-2 form-floating">
-                <input
-                  placeholder="Correo electronico"
-                  type="email"
-                  required disabled
-                  class="form-control"
-                  name="correo"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing"
-                  maxlength="3"
-                />
-                <label for="floatingInput">Correo electronico</label>
-              </div>
+          <div class="col-6 form-floating">
+            <input
+              placeholder="Id_empleado"
+              type="text"
+              required disabled
+              class="form-control"
+              name="id_empleado"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing"
+            />
+            <label for="floatingInput">Id_empleado</label>
+          </div>
+          <div class="col-6 form-floating">
+            <select
+              class="form-select form-control"
+              aria-label="Default select example"
+              name="Categoria"
+              required disabled
+            >
+              <option selected>Seleccione</option>
+              <option value="admin">Admin</option>
+              <option value="vendedor">Vendedor</option>
+            </select>
+            <label for="floatingInput">Tipo empleado</label>
+          </div>
+          <div class="col-12 my-2 form-floating">
+            <input
+              placeholder="Nombre"
+              type="text"
+              required disabled
+              class="form-control"
+              name="Nombre"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing"
+              maxlength="3"
+            />
+            <label for="floatingInput">Nombre</label>
+          </div>
+          <div class="col-6 form-floating">
+            <input
+              placeholder="Telefono"
+              type="tel"
+              required disabled
+              class="form-control"
+              name="telefono"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing"
+              maxlength="3"
+            />
+            <label for="floatingInput">Telefono</label>
+          </div>
+          <div class="col-6 form-floating">
+            <input
+              placeholder="dni"
+              type="text"
+              required disabled
+              class="form-control"
+              name="dni"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing"
+            />
+            <label for="floatingInput">DNI</label>
+          </div>
+          <div class="col-12 my-2 form-floating">
+            <input
+              placeholder="Direción"
+              type="text"
+              required disabled
+              class="form-control"
+              name="direccion"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing"
+              maxlength="3"
+            />
+            <label for="floatingInput">Direción</label>
+          </div>
+          <div class="col-12 my-2 form-floating">
+            <input
+              placeholder="Contraseña"
+              type="text"
+              required disabled
+              class="form-control"
+              name="contra"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing"
+              maxlength="3"
+            />
+            <label for="floatingInput">Contraseña</label>
+          </div>
         </div>
       </div>
       <a href="#tablas" class="btn button">

@@ -8,7 +8,7 @@ const container_productos_actualizar = document.getElementById("cards-productos-
 
 const productos = async () => {
   try {
-    const res = await fetch("./producto.json");
+    const res = await fetch("js/producto.json");
     const data = await res.json();
     pintarCards(data);
     pintarCardsActualizar(data);

@@ -1,0 +1,112 @@
+[
+    {
+        "id":"H1232",
+        "cod":"1237",
+        "nombre":"Medicina",
+        "img":"./imgs/imagenes_producto/img-medicine.png",
+        "proveedor":"ligma",
+        "categoria":"pildoras",
+        "stock":"13",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"20"
+    },
+    {
+        "id":"H1256",
+        "cod":"8239",
+        "nombre":"Mascarilla",
+        "img":"./imgs/imagenes_producto/mascarilla.jpg",
+        "proveedor":"ligma",
+        "categoria":"mascarillas",
+        "stock":"100",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"1.50"
+    },
+    {
+        "id":"H1012",
+        "cod":"1209",
+        "nombre":"Anti diabetico",
+        "img":"./imgs/imagenes_producto/antidiabetic.png",
+        "proveedor":"ligma",
+        "categoria":"pildoras",
+        "stock":"50",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"56"
+    },
+    {
+        "id":"H1412",
+        "cod":"2213",
+        "nombre":"Vitamin complex",
+        "img":"./imgs/imagenes_producto/complex.png",
+        "proveedor":"pumafarma",
+        "categoria":"vitaminas",
+        "stock":"120",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"45"
+    },
+    {
+        "id":"H1233",
+        "cod":"1444",
+        "nombre":"Ginger",
+        "img":"./imgs/imagenes_producto/ginger.jpg",
+        "proveedor":"wakaya",
+        "categoria":"pildoras",
+        "stock":"50",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"25"
+    },
+    {
+        "id":"H1235",
+        "cod":"4012",
+        "nombre":"Melatonina",
+        "img":"./imgs/imagenes_producto/melatonina.jpg",
+        "proveedor":"vit-amint",
+        "categoria":"vitaminas",
+        "stock":"30",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"15"
+    },
+    {
+        "id":"H1239",
+        "cod":"1090",
+        "nombre":"Vitamina C",
+        "img":"./imgs/imagenes_producto/nature-made.jpg",
+        "proveedor":"naturemade",
+        "categoria":"vitaminas",
+        "stock":"120",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"40"
+    },
+    {
+        "id":"H1252",
+        "cod":"1723",
+        "nombre":"Metformin",
+        "img":"./imgs/imagenes_producto/pastillas.png",
+        "proveedor":"ligma",
+        "categoria":"pastillas",
+        "stock":"150",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"10"
+    },
+    {
+        "id":"H1282",
+        "cod":"7632",
+        "nombre":"Perise",
+        "img":"./imgs/imagenes_producto/peRise.jpg",
+        "proveedor":"GMP",
+        "categoria":"pastillas",
+        "stock":"80",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"2.50"
+    },
+    {
+        "id":"H1211",
+        "cod":"1987",
+        "nombre":"Vigatol",
+        "img":"./imgs/imagenes_producto/vigantol.jpeg",
+        "proveedor":"merck",
+        "categoria":"pastillas",
+        "stock":"200",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis iste vitae corrupti, quibusdam culpa alias tempora illo? Est numquam corrupti soluta, autem nobis quasi officiis blanditiis itaque vitae magnam!",
+        "precio":"30"
+    }
+]
